@@ -9,8 +9,8 @@
 </template>
 
 <script>
-import button from './button'
-import layout from './layout'
+import ButtonComponents from '../../../buttonComponents/src/components/ButtonComponents'
+import LayoutComponents from '../../../layoutComponents/src/components/LayoutComponents'
 export default {
   props: {
     showContent: { type: String, default: '' }
@@ -21,12 +21,11 @@ export default {
   },
   computed: {
     componentFactory() {
-      console.log(this.showContent)
       switch (this.currentComponent) {
         case 'Button':
-          return button
+          return ButtonComponents
         case 'Layout':
-          return layout
+          return LayoutComponents
         default:
           return null
       }
