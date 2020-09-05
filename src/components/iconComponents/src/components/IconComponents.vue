@@ -36,6 +36,8 @@
     >
       <i :class="codeControllerIcon"></i>&nbsp;<span>{{codeControllerLabel}}</span>
     </div>
+    <h3>更多图标集合请进入以下网址寻找</h3>
+    <a href="https://fontawesome.com/icons?d=gallery" target="_blank">font awesome</a>
   </div>
 </template>
 

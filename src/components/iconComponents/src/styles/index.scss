@@ -1,6 +1,7 @@
 .icon-components-box {
   display: flex;
   border: 1px solid #ebebeb;
+  margin-top: 1em;
 }
 .icon-components-icon {
   margin: 1em;
@@ -8,10 +9,18 @@
 }
 .code-controller {
   border: 1px solid #ebebeb;
+  border-top: none;
   padding: 1em 0;
   text-align: center;
   cursor: pointer;
 }
 .code-controller:hover {
+  color: #069;
+}
+.icon-components a {
+  text-decoration: none;
+  color: #000;
+}
+.icon-components a:hover {
   color: #069;
 }
