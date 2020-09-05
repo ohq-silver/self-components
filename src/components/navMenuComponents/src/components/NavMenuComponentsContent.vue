@@ -4,6 +4,7 @@
   >
     <component 
       :is="componentFactory"
+      :icon="icon"
     ></component>
   </div>
 </template>
@@ -18,6 +19,7 @@ export default {
   },
   data() {
     return {
+      icon: 'fa fa-adjust'
     }
   },
   computed: {

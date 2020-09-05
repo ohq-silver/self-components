@@ -21,22 +21,18 @@ export default {
     NavMenuComponentsTitles,
     NavMenuComponentsContent
   },
+  props: {
+    titles: { type: Array, default: () => ([]) },
+    showContent: { type: String, default: '' }
+  },
   mixins: [NavMenuComponents],
   data() {
     return {
-      titles: [
-        { id: 1, title: 'Button 按钮' },
-        { id: 2, title: 'Icon 图标' },
-        { id: 3, title: 'Layout 布局' }
-      ],
-      showContent: 'Button'
     }
   },
   methods: {
     clickTitle(obj) {
-      // eslint-disable-next-line
-      const [englishTitle, chineseTitle] = obj.title.split(' ')
-      this.showContent = englishTitle
+      this.$emit('clickeTitle', obj)
     }
   }
 }

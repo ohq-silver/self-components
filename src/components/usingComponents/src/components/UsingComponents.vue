@@ -2,7 +2,11 @@
   <div class="using-components"
   >
     轮子主页面
-    <nav-menu-components></nav-menu-components>
+    <nav-menu-components
+      :titles="titles"
+      :showContent="showContent"
+      @clickeTitle="clickeTitle"
+    ></nav-menu-components>
   </div>
 </template>
 
@@ -14,7 +18,24 @@ export default {
   components: {
     NavMenuComponents
   },
-  mixins: [UsingComponents]
+  mixins: [UsingComponents],
+  data() {
+    return {
+      titles: [
+        { id: 1, title: 'Button 按钮' },
+        { id: 2, title: 'Icon 图标' },
+        { id: 3, title: 'Layout 布局' }
+      ],
+      showContent: 'Button'
+    }
+  },
+  methods: {
+    clickeTitle(obj) {
+      // eslint-disable-next-line
+      const [englishTitle, chineseTitle] = obj.title.split(' ')
+      this.showContent = englishTitle
+    }
+  }
 }
 </script>
 
