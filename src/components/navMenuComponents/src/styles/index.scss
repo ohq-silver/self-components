@@ -1,3 +1,18 @@
 .nav-menu-components {
-  color: red;
+  display: flex;
+}
+.nav-menu-components-titles {
+  width: 13%;
+}
+.nav-menu-components-content {
+  width: 87%;
+  margin: 1.5em;
+}
+.nav-menu-components-title {
+  margin-top: 1.5em;
+  text-align: center;
+  cursor: pointer;
+}
+.nav-menu-components-title:hover {
+  color: #069;
 }
