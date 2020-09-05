@@ -1,0 +1,17 @@
+.code-components {
+  background-color: #eee;
+  color: #069;
+  padding: 0.5em 0;
+  border: 1px solid #ebebeb;
+  border-top: none;
+  border-bottom: none;
+}
+.code-components-content {
+  display: flex;
+}
+.code-components-open-tag {
+  margin-left: 1em;
+}
+.code-components-open-tag-attr {
+  color: #636
+}

@@ -1,7 +1,6 @@
 <template>
   <div class="using-components"
   >
-    轮子主页面
     <nav-menu-components
       :titles="titles"
       :showContent="showContent"

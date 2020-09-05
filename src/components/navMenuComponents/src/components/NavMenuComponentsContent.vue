@@ -4,7 +4,7 @@
   >
     <component 
       :is="componentFactory"
-      :icon="icon"
+      :icons="icons"
     ></component>
   </div>
 </template>
@@ -19,7 +19,12 @@ export default {
   },
   data() {
     return {
-      icon: 'fa fa-adjust'
+      icons: [
+        { icon: 'fa fa-plus-circle' },
+        { icon: 'fa fa-minus-circle' },
+        { icon: 'fa fa-edit' },
+        { icon: 'fa fa-search' }
+      ]
     }
   },
   computed: {

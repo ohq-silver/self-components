@@ -1,1 +1,17 @@
-@import "font-awesome/css/font-awesome.css";
+.icon-components-box {
+  display: flex;
+  border: 1px solid #ebebeb;
+}
+.icon-components-icon {
+  margin: 1em;
+  font-size: 2em;
+}
+.code-controller {
+  border: 1px solid #ebebeb;
+  padding: 1em 0;
+  text-align: center;
+  cursor: pointer;
+}
+.code-controller:hover {
+  color: #069;
+}
