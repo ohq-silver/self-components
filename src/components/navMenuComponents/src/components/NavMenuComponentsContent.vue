@@ -10,6 +10,7 @@
 
 <script>
 import ButtonComponents from '../../../buttonComponents/src/components/ButtonComponents'
+import IconComponents from '../../../iconComponents/src/components/IconComponents'
 import LayoutComponents from '../../../layoutComponents/src/components/LayoutComponents'
 export default {
   props: {
@@ -24,6 +25,8 @@ export default {
       switch (this.currentComponent) {
         case 'Button':
           return ButtonComponents
+        case 'Icon':
+          return IconComponents
         case 'Layout':
           return LayoutComponents
         default:

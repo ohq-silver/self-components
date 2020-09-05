@@ -13,6 +13,8 @@
   text-align: center;
   cursor: pointer;
 }
-.nav-menu-components-title:hover {
+.nav-menu-components-title-default:hover,
+.nav-menu-components-title-active {
   color: #069;
 }
+

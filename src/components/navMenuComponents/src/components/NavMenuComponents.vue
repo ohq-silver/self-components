@@ -25,16 +25,17 @@ export default {
   data() {
     return {
       titles: [
-        { title: 'Layout 布局' },
-        { title: 'Button 按钮' }
+        { id: 1, title: 'Button 按钮' },
+        { id: 2, title: 'Icon 图标' },
+        { id: 3, title: 'Layout 布局' }
       ],
       showContent: 'Button'
     }
   },
   methods: {
-    clickTitle(title) {
+    clickTitle(obj) {
       // eslint-disable-next-line
-      const [englishTitle, chineseTitle] = title.split(' ')
+      const [englishTitle, chineseTitle] = obj.title.split(' ')
       this.showContent = englishTitle
     }
   }
