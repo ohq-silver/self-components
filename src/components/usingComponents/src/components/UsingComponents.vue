@@ -12,9 +12,11 @@
 <script>
 import UsingComponents from '../mixins/UsingComponents'
 import NavMenuComponents from '../../../navMenuComponents/src/components/NavMenuComponents'
+// import Icon from '../../../iconComponents/src/components/Icon'
 
 export default {
   components: {
+    // Icon,
     NavMenuComponents
   },
   mixins: [UsingComponents],

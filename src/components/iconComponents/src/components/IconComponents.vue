@@ -11,7 +11,7 @@
       v-for="(item, idx) in icons" 
       :key="idx"
       >
-        <i :class="item.icon"></i>
+        <icon :icon="item.icon"></icon>
       </div>
     </div>
     <div v-if="isShowCode">
@@ -42,11 +42,13 @@
 </template>
 
 <script>
+import Icon from './Icon'
 import IconComponents from '../mixins/IconComponents'
 import CodeComponents from '../../../codeComponents/src/components/CodeComponents'
 
 export default {
   components: {
+    Icon,
     CodeComponents
   },
   props: {
@@ -57,20 +59,20 @@ export default {
     return {
       codes: [
         {
-          tag: 'i',
-          attr: [{ name: 'class', attr: 'fa fa-plus-circle' }]
+          tag: 'icon',
+          attr: [{ name: 'icon', attr: 'fa fa-plus-circle' }]
         },
         {
-          tag: 'i',
-          attr: [{ name: 'class', attr: 'fa fa-minus-circle' }]
+          tag: 'icon',
+          attr: [{ name: 'icon', attr: 'fa fa-minus-circle' }]
         },
         {
-          tag: 'i',
-          attr: [{ name: 'class', attr: 'fa fa-edit' }]
+          tag: 'icon',
+          attr: [{ name: 'icon', attr: 'fa fa-edit' }]
         },
         {
-          tag: 'i',
-          attr: [{ name: 'class', attr: 'fa fa-search' }]
+          tag: 'icon',
+          attr: [{ name: 'icon', attr: 'fa fa-search' }]
         }
       ],
       isShowCode: false,
