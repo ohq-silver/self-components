@@ -1,6 +1,5 @@
 <template>
   <div
-    v-if="showCode"
     class="code-components"
   >
       <div
@@ -13,6 +12,10 @@
         <code-components-close-tag
           :tag="tag"
         ></code-components-close-tag>
+        <code-components-code-body
+          v-if="body"
+          :body="body"
+        ></code-components-code-body>
       </div>
   </div>
 </template>
@@ -21,20 +24,28 @@
 import CodeComponents from '../mixins/CodeComponents'
 import CodeComponentsOpenTag from './CodeComponentsOpenTag'
 import CodeComponentsCloseTag from './CodeComponentsCloseTag'
+import CodeComponentsCodeBody from './CodeComponentsCodeBody'
 
 export default {
   components: {
     CodeComponentsOpenTag,
-    CodeComponentsCloseTag
+    CodeComponentsCloseTag,
+    CodeComponentsCodeBody
   },
   props: {
     attr: { type: Array, default: () => ([]) },
-    tag: { type: String, default: '' }
+    tag: { type: String, default: '' },
+    body: { type: Array, default: null }
   },
   mixins: [CodeComponents],
   data() {
     return {
-      showCode: true
+    }
+  },
+  computed: {
+    showBody() {
+      console.log(this.body)
+      return false
     }
   }
 }

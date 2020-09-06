@@ -14,28 +14,14 @@
         <icon :icon="item.icon"></icon>
       </div>
     </div>
-    <div v-if="isShowCode">
-      <code-components
-        v-for="(item, idx) in codes"
-        :key="idx"
-        :tag="item.tag"
-        :attr="item.attr"
-      ></code-components>
-    </div>
-    <div
-      v-if="!isShowCode"
-      class="code-controller" 
-      @click="showCode"
-    >
-      <i :class="codeControllerIcon"></i>&nbsp;<span>{{codeControllerLabel}}</span>
-    </div>
-    <div
-      v-if="isShowCode"
-      class="code-controller" 
-      @click="hideCode"
-    >
-      <i :class="codeControllerIcon"></i>&nbsp;<span>{{codeControllerLabel}}</span>
-    </div>
+    <code-controller
+      :codes="codes"
+      :codeControllerIcon="codeControllerIcon"
+      :codeControllerLabel="codeControllerLabel"
+      :isShowCode="isShowCode"
+      @showCode="showCode"
+      @hideCode="hideCode"
+    ></code-controller>
     <h3>更多图标集合请进入以下网址寻找</h3>
     <a href="https://fontawesome.com/icons?d=gallery" target="_blank">font awesome</a>
   </div>
@@ -43,13 +29,13 @@
 
 <script>
 import Icon from './Icon'
+import CodeController from '../../../codeController/src/components/CodeController'
 import IconComponents from '../mixins/IconComponents'
-import CodeComponents from '../../../codeComponents/src/components/CodeComponents'
 
 export default {
   components: {
-    Icon,
-    CodeComponents
+    CodeController,
+    Icon
   },
   props: {
     icons: { type: Array, default: () => ([]) }
