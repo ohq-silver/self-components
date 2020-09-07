@@ -1,5 +1,7 @@
 //控制循环显示的button横向排列，并设置间距
-.button-box {
+.button-box,
+.icon-button-box,
+.ban-button-box {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between; //设置每个子元素的间距
@@ -14,6 +16,19 @@
   text-align: center;
   padding: 0.5em 0;
   cursor: pointer;
+}
+.base-button:focus {
+  outline: none;
+}
+.base-button:hover {
+  opacity: 0.7;
+}
+.base-button-ban {
+  opacity: 0.5;
+}
+.base-button-ban.base-button-ban:hover {
+  cursor: not-allowed;
+  opacity: 0.5;
 }
 //按钮里面内容居中排列
 .base-button-content {
@@ -32,47 +47,32 @@
 }
 //默认按钮样式
 .base-button-default:hover {
-  border: 1px solid rgba(0,102,153,.1);
-  background-color: rgba(0,102,153,.1);
-  color: #069;
+  // border: 1px solid rgba(0,102,153,.1);
+  // background-color: rgba(0,102,153,.1);
+  // color: #069;
 }
 //主要按钮样式
 .base-button-primary {
   background-color: #069;
   color: #fff
 }
-.base-button-primary:hover {
-  opacity: 0.8;
-}
 //成功按钮样式
 .base-button-success {
   background-color: rgb(0, 153, 59);
   color: #fff
-}
-.base-button-success:hover {
-  opacity: 0.8;
 }
 //信息按钮样式
 .base-button-message {
   background-color: #999;
   color: #fff
 }
-.base-button-message:hover {
-  opacity: 0.8;
-}
 //警告按钮样式
 .base-button-warning {
   background-color: rgba(255, 136, 0, 0.877);
   color: #fff
 }
-.base-button-warning:hover {
-  opacity: 0.8;
-}
 //警告按钮样式
 .base-button-danger {
   background-color: #c33;
   color: #fff
-}
-.base-button-danger:hover {
-  opacity: 0.8;
 }

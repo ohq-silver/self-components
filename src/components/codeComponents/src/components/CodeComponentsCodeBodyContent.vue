@@ -40,7 +40,7 @@
           <span
             class="code-components-code-body-content-inside-attr"
           >
-            '{{codeContentInsideItem.codeContentInsideAttr}}'
+            '{{codeContentInsideItem.codeContentInsideAttr}}'，
           </span>
           <div
             v-if="codeContentInsideItem.codeContentStructEnd"

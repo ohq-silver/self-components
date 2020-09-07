@@ -1,8 +1,8 @@
 <template>
-  <div
-    class="base-button"
-    :class="buttonType"
+  <button
+    :class="'base-button ' + buttonType + ' ' + buttonBan"
     @click="click"
+    :disabled="disabled"
   >
     <div
       class="base-button-content"
@@ -12,14 +12,19 @@
         v-if="pre"
         :icon="pre.icon"
       ></icon>
-      <div class="button-label">{{ label }}</div>
+      <div
+        v-if="label"
+        class="button-label"
+      >
+        {{ label }}
+      </div>
       <icon
         class="button-icon suf"
         v-if="suf"
         :icon="suf.icon"
       ></icon>
     </div>
-  </div>
+  </button>
 </template>
 
 <script>
@@ -43,10 +48,19 @@ export default {
       return this.buttonAttr ? (this.buttonAttr.suf || null) : null
     },
     label() {
-      return this.buttonAttr ? (this.buttonAttr.label || 'button') : null
+      return this.buttonAttr ? (this.buttonAttr.label || null) : null
     },
     buttonType() {
       return this.buttonAttr ? (this.buttonAttr.type || 'base-button-default') : null
+    },
+    disabled() {
+      return this.buttonAttr ? (this.buttonAttr.disabled || false) : null
+    },
+    buttonBan() {
+      if (this.disabled) {
+        return 'base-button-ban'
+      }
+      return ''
     }
   },
   methods: {

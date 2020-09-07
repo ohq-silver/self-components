@@ -14,6 +14,16 @@
         @click="click"
       ></base-button>
     </div>
+    <div
+      class="icon-button-box"
+    >
+      <base-button
+        v-for="(item, idx) in iconButtons"
+        :key="idx"
+        :buttonAttr="item.buttonAttr"
+        @click="click"
+      ></base-button>
+    </div>
     <code-controller
       :codes="codes"
       :codeControllerIcon="codeControllerIcon"
@@ -22,7 +32,25 @@
       @showCode="showCode"
       @hideCode="hideCode"
     ></code-controller>
-
+    <h3>禁用按钮</h3>
+    <div
+      class="ban-button-box"
+    >
+      <base-button
+        v-for="(item, idx) in banButtons"
+        :key="idx"
+        :buttonAttr="item.buttonAttr"
+        @click="click"
+      ></base-button>
+    </div>
+    <code-controller
+      :codes="banCodes"
+      :codeControllerIcon="banCodeControllerIcon"
+      :codeControllerLabel="banCodeControllerLabel"
+      :isShowCode="isShowBanCode"
+      @showCode="showBanCode"
+      @hideCode="hideBanCode"
+    ></code-controller>
   </div>
 </template>
 
@@ -88,13 +116,216 @@ export default {
           }
         }
       ],
+      banCodes: [
+        {
+          tag: 'base-button',
+          attr: [{ name: ':buttonAttr', attr: 'buttonAttr' }],
+          body: [
+            {
+              codeContentDescribe: '// 在data中调用,如果要禁用，那么只需要将disabled: true添加到buttonAttr中即可',
+              codeContent: [
+                {
+                  codeContentBeginTitle: 'buttonAttr: {',
+                  codeContentInside: [
+                    {
+                      codeContentStructBegin: 'pre: {',
+                      codeContentInsideName: 'icon: ',
+                      codeContentInsideAttr: 'fa fa-search',
+                      codeContentStructEnd: '}'
+                    },
+                    {
+                      codeContentInsideName: 'label: ',
+                      codeContentInsideAttr: '默认按钮'
+                    },
+                    {
+                      codeContentInsideName: 'disabled: ',
+                      codeContentInsideAttr: 'true'
+                    }
+                  ],
+                  codeContentEndTitle: '}'
+                }
+              ]
+            }
+          ]
+        },
+        {
+          tag: 'base-button',
+          attr: [{ name: ':buttonAttr', attr: 'buttonAttr' }],
+          body: [
+            {
+              codeContent: [
+                {
+                  codeContentBeginTitle: 'buttonAttr: {',
+                  codeContentInside: [
+                    {
+                      codeContentStructBegin: 'suf: {',
+                      codeContentInsideName: 'icon: ',
+                      codeContentInsideAttr: 'fa fa-search',
+                      codeContentStructEnd: '}'
+                    },
+                    {
+                      codeContentInsideName: 'label: ',
+                      codeContentInsideAttr: '默认按钮'
+                    },
+                    {
+                      codeContentInsideName: 'disabled: ',
+                      codeContentInsideAttr: 'true'
+                    }
+                  ],
+                  codeContentEndTitle: '}'
+                }
+              ]
+            }
+          ]
+        },
+        {
+          tag: 'base-button',
+          attr: [{ name: ':buttonAttr', attr: 'buttonAttr' }],
+          body: [
+            {
+              codeContent: [
+                {
+                  codeContentBeginTitle: 'buttonAttr: {',
+                  codeContentInside: [
+                    {
+                      codeContentInsideName: 'type: ',
+                      codeContentInsideAttr: 'base-button-primary'
+                    },
+                    {
+                      codeContentInsideName: 'label: ',
+                      codeContentInsideAttr: '主要按钮'
+                    },
+                    {
+                      codeContentInsideName: 'disabled: ',
+                      codeContentInsideAttr: 'true'
+                    }
+                  ],
+                  codeContentEndTitle: '}'
+                }
+              ]
+            }
+          ]
+        },
+        {
+          tag: 'base-button',
+          attr: [{ name: ':buttonAttr', attr: 'buttonAttr' }],
+          body: [
+            {
+              codeContent: [
+                {
+                  codeContentBeginTitle: 'buttonAttr: {',
+                  codeContentInside: [
+                    {
+                      codeContentInsideName: 'type: ',
+                      codeContentInsideAttr: 'base-button-success'
+                    },
+                    {
+                      codeContentInsideName: 'label: ',
+                      codeContentInsideAttr: '成功按钮'
+                    },
+                    {
+                      codeContentInsideName: 'disabled: ',
+                      codeContentInsideAttr: 'true'
+                    }
+                  ],
+                  codeContentEndTitle: '}'
+                }
+              ]
+            }
+          ]
+        },
+        {
+          tag: 'base-button',
+          attr: [{ name: ':buttonAttr', attr: 'buttonAttr' }],
+          body: [
+            {
+              codeContent: [
+                {
+                  codeContentBeginTitle: 'buttonAttr: {',
+                  codeContentInside: [
+                    {
+                      codeContentInsideName: 'type: ',
+                      codeContentInsideAttr: 'base-button-message'
+                    },
+                    {
+                      codeContentInsideName: 'label: ',
+                      codeContentInsideAttr: '信息按钮'
+                    },
+                    {
+                      codeContentInsideName: 'disabled: ',
+                      codeContentInsideAttr: 'true'
+                    }
+                  ],
+                  codeContentEndTitle: '}'
+                }
+              ]
+            }
+          ]
+        },
+        {
+          tag: 'base-button',
+          attr: [{ name: ':buttonAttr', attr: 'buttonAttr' }],
+          body: [
+            {
+              codeContent: [
+                {
+                  codeContentBeginTitle: 'buttonAttr: {',
+                  codeContentInside: [
+                    {
+                      codeContentInsideName: 'type: ',
+                      codeContentInsideAttr: 'base-button-warning'
+                    },
+                    {
+                      codeContentInsideName: 'label: ',
+                      codeContentInsideAttr: '警告按钮'
+                    },
+                    {
+                      codeContentInsideName: 'disabled: ',
+                      codeContentInsideAttr: 'true'
+                    }
+                  ],
+                  codeContentEndTitle: '}'
+                }
+              ]
+            }
+          ]
+        },
+        {
+          tag: 'base-button',
+          attr: [{ name: ':buttonAttr', attr: 'buttonAttr' }],
+          body: [
+            {
+              codeContent: [
+                {
+                  codeContentBeginTitle: 'buttonAttr: {',
+                  codeContentInside: [
+                    {
+                      codeContentInsideName: 'type: ',
+                      codeContentInsideAttr: 'base-button-danger'
+                    },
+                    {
+                      codeContentInsideName: 'label: ',
+                      codeContentInsideAttr: '危险按钮'
+                    },
+                    {
+                      codeContentInsideName: 'disabled: ',
+                      codeContentInsideAttr: 'true'
+                    }
+                  ],
+                  codeContentEndTitle: '}'
+                }
+              ]
+            }
+          ]
+        }
+      ],
       codes: [
         {
           tag: 'base-button',
           attr: [{ name: ':buttonAttr', attr: 'buttonAttr' }],
           body: [
             {
-              codeContentDescribe: '// 在data中调用',
+              codeContentDescribe: '// 在data中调用,如果只保留图标，那么只需要将pre的属性保留即可',
               codeContent: [
                 {
                   codeContentBeginTitle: 'buttonAttr: {',
@@ -121,7 +352,6 @@ export default {
           attr: [{ name: ':buttonAttr', attr: 'buttonAttr' }],
           body: [
             {
-              codeContentDescribe: '// 在data中调用',
               codeContent: [
                 {
                   codeContentBeginTitle: 'buttonAttr: {',
@@ -148,7 +378,6 @@ export default {
           attr: [{ name: ':buttonAttr', attr: 'buttonAttr' }],
           body: [
             {
-              codeContentDescribe: '// 在data中调用',
               codeContent: [
                 {
                   codeContentBeginTitle: 'buttonAttr: {',
@@ -173,7 +402,6 @@ export default {
           attr: [{ name: ':buttonAttr', attr: 'buttonAttr' }],
           body: [
             {
-              codeContentDescribe: '// 在data中调用',
               codeContent: [
                 {
                   codeContentBeginTitle: 'buttonAttr: {',
@@ -198,7 +426,6 @@ export default {
           attr: [{ name: ':buttonAttr', attr: 'buttonAttr' }],
           body: [
             {
-              codeContentDescribe: '// 在data中调用',
               codeContent: [
                 {
                   codeContentBeginTitle: 'buttonAttr: {',
@@ -223,7 +450,6 @@ export default {
           attr: [{ name: ':buttonAttr', attr: 'buttonAttr' }],
           body: [
             {
-              codeContentDescribe: '// 在data中调用',
               codeContent: [
                 {
                   codeContentBeginTitle: 'buttonAttr: {',
@@ -248,7 +474,6 @@ export default {
           attr: [{ name: ':buttonAttr', attr: 'buttonAttr' }],
           body: [
             {
-              codeContentDescribe: '// 在data中调用',
               codeContent: [
                 {
                   codeContentBeginTitle: 'buttonAttr: {',
@@ -270,8 +495,115 @@ export default {
         }
       ],
       isShowCode: false,
+      isShowBanCode: false,
+      iconButtons: [
+        {
+          buttonAttr: {
+            pre: {
+              icon: 'fa fa-search'
+            }
+          }
+        },
+        {
+          buttonAttr: {
+            pre: {
+              icon: 'fa fa-edit'
+            },
+            type: 'base-button-primary'
+          }
+        },
+        {
+          buttonAttr: {
+            pre: {
+              icon: 'fa fa-check'
+            },
+            type: 'base-button-success'
+          }
+        },
+        {
+          buttonAttr: {
+            pre: {
+              icon: 'fa fa-envelope'
+            },
+            type: 'base-button-message'
+          }
+        },
+        {
+          buttonAttr: {
+            pre: {
+              icon: 'fa fa-star'
+            },
+            type: 'base-button-warning'
+          }
+        },
+        {
+          buttonAttr: {
+            pre: {
+              icon: 'fa fa-trash'
+            },
+            type: 'base-button-danger'
+          }
+        }
+      ],
+      banButtons: [
+        {
+          buttonAttr: {
+            pre: {
+              icon: 'fa fa-search'
+            },
+            label: '默认按钮',
+            disabled: true
+          }
+        },
+        {
+          buttonAttr: {
+            suf: {
+              icon: 'fa fa-search'
+            },
+            label: '默认按钮',
+            disabled: true
+          }
+        },
+        {
+          buttonAttr: {
+            label: '主要按钮',
+            type: 'base-button-primary',
+            disabled: true
+          }
+        },
+        {
+          buttonAttr: {
+            label: '成功按钮',
+            type: 'base-button-success',
+            disabled: true
+          }
+        },
+        {
+          buttonAttr: {
+            label: '信息按钮',
+            type: 'base-button-message',
+            disabled: true
+          }
+        },
+        {
+          buttonAttr: {
+            label: '警告按钮',
+            type: 'base-button-warning',
+            disabled: true
+          }
+        },
+        {
+          buttonAttr: {
+            label: '危险按钮',
+            type: 'base-button-danger',
+            disabled: true
+          }
+        }
+      ],
       codeControllerIcon: 'fa fa-plus-circle',
-      codeControllerLabel: '显示代码'
+      codeControllerLabel: '显示代码',
+      banCodeControllerIcon: 'fa fa-plus-circle',
+      banCodeControllerLabel: '显示代码'
     }
   },
   methods: {
@@ -285,8 +617,18 @@ export default {
     },
     hideCode() {
       this.isShowCode = false
-      this.codeControllerIcon = 'fa fa-plus-circle'
-      this.codeControllerLabel = '显示代码'
+      this.banCodeControllerIcon = 'fa fa-plus-circle'
+      this.banCodeControllerLabel = '显示代码'
+    },
+    showBanCode() {
+      this.isShowBanCode = true
+      this.banCodeControllerIcon = 'fa fa-minus-circle'
+      this.banCodeControllerLabel = '隐藏代码'
+    },
+    hideBanCode() {
+      this.isShowBanCode = false
+      this.banCodeControllerIcon = 'fa fa-plus-circle'
+      this.banCodeControllerLabel = '显示代码'
     }
   }
 }
