@@ -1,10 +1,15 @@
 //控制循环显示的button横向排列，并设置间距
 .button-box,
 .icon-button-box,
-.ban-button-box {
+.ban-button-box,
+.group-button-box {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between; //设置每个子元素的间距
+  border: 1px solid #ebebeb;
+  padding: 1em 1em;
+}
+.text-button-box {
   border: 1px solid #ebebeb;
   padding: 1em 1em;
 }
@@ -17,10 +22,31 @@
   padding: 0.5em 0;
   cursor: pointer;
 }
+.group-button-box {
+  justify-content: flex-start;
+}
+.group-button {
+  display: flex;
+  width: 15%;
+  margin-left: 1em;
+  border: 1px solid #000;
+}
+.group-button .base-button {
+  border: none;
+  border-radius: 0;
+  width: 100%;
+}
+//文字按钮
+.base-button-text {
+  border: none;
+  background-color: #fff;
+  color: #069;
+}
 .base-button:focus {
   outline: none;
 }
-.base-button:hover {
+.base-button:hover,
+.group-button-active {
   opacity: 0.7;
 }
 .base-button-ban {

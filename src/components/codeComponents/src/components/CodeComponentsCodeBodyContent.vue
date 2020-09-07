@@ -38,6 +38,7 @@
             {{codeContentInsideItem.codeContentInsideName}}
           </span>
           <span
+            v-if="codeContentInsideItem.codeContentInsideAttr"
             class="code-components-code-body-content-inside-attr"
           >
             '{{codeContentInsideItem.codeContentInsideAttr}}'，

@@ -51,18 +51,61 @@
       @showCode="showBanCode"
       @hideCode="hideBanCode"
     ></code-controller>
+    <h3>文字按钮</h3>
+    <div
+      class="text-button-box"
+    >
+      <base-button
+        v-for="(item, idx) in textButtons"
+        :key="idx"
+        :buttonAttr="item.buttonAttr"
+        @click="click"
+      ></base-button>
+    </div>
+    <code-controller
+      :codes="textCodes"
+      :codeControllerIcon="textCodeControllerIcon"
+      :codeControllerLabel="textCodeControllerLabel"
+      :isShowCode="isShowTextCode"
+      @showCode="showTextCode"
+      @hideCode="hideTextCode"
+    ></code-controller>
+    <h3>按钮组</h3>
+    <div
+      class="group-button-box"
+    >
+      <group-button
+        :buttons="groupButtons"
+        @click="clickGroupButton"
+      ></group-button>
+      <group-button
+        :buttons="iconGroupButtons"
+        @click="clickIconGroupButton"
+      ></group-button>
+    </div>
+    <code-controller
+      :codes="groupButtonCodes"
+      :codeControllerIcon="groupButtonCodeControllerIcon"
+      :codeControllerLabel="groupButtonCodeControllerLabel"
+      :isShowCode="isShowGroupButtonCode"
+      @showCode="showGroupButtonCode"
+      @hideCode="hideGroupButtonCode"
+    ></code-controller>
   </div>
 </template>
 
 <script>
-import BaseButton from './BaseButton'
+
 import ButtonComponents from '../mixins/ButtonComponents'
 
+import BaseButton from './BaseButton'
+import GroupButton from './GroupButton'
 import CodeController from '../../../codeController/src/components/CodeController'
 
 export default {
   components: {
     BaseButton,
+    GroupButton,
     CodeController
   },
   mixins: [ButtonComponents],
@@ -494,8 +537,142 @@ export default {
           ]
         }
       ],
+      textCodes: [
+        {
+          tag: 'base-button',
+          attr: [{ name: ':buttonAttr', attr: 'buttonAttr' }],
+          body: [
+            {
+              codeContent: [
+                {
+                  codeContentBeginTitle: 'buttonAttr: {',
+                  codeContentInside: [
+                    {
+                      codeContentInsideName: 'type: ',
+                      codeContentInsideAttr: 'base-button-text'
+                    },
+                    {
+                      codeContentInsideName: 'label: ',
+                      codeContentInsideAttr: '文字按钮'
+                    }
+                  ],
+                  codeContentEndTitle: '}'
+                }
+              ]
+            }
+          ]
+        },
+        {
+          tag: 'base-button',
+          attr: [{ name: ':buttonAttr', attr: 'buttonAttr' }],
+          body: [
+            {
+              codeContent: [
+                {
+                  codeContentBeginTitle: 'buttonAttr: {',
+                  codeContentInside: [
+                    {
+                      codeContentInsideName: 'type: ',
+                      codeContentInsideAttr: 'base-button-text'
+                    },
+                    {
+                      codeContentInsideName: 'label: ',
+                      codeContentInsideAttr: '文字按钮'
+                    },
+                    {
+                      codeContentInsideName: 'disabled: ',
+                      codeContentInsideAttr: 'true'
+                    }
+                  ],
+                  codeContentEndTitle: '}'
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      groupButtonCodes: [
+        {
+          tag: 'group-button',
+          attr: [{ name: ':buttons', attr: 'buttons' }],
+          body: [
+            {
+              codeContentDescribe: '// buttonAttr的参数和基础按钮的buttonAttr参数用法一致',
+              codeContent: [
+                {
+                  codeContentBeginTitle: 'buttons: [',
+                  codeContentInside: [
+                    {
+                      codeContentStructBegin: '{',
+                      codeContentInsideName: 'id: 0, buttonAttr: {...}',
+                      codeContentStructEnd: '}'
+                    }
+                  ],
+                  codeContentEndTitle: ']'
+                },
+                {
+                  codeContentBeginTitle: 'buttons: [',
+                  codeContentInside: [
+                    {
+                      codeContentStructBegin: '{',
+                      codeContentInsideName: 'id: 1, buttonAttr: {...}',
+                      codeContentStructEnd: '}'
+                    }
+                  ],
+                  codeContentEndTitle: ']'
+                }
+              ]
+            }
+          ]
+        },
+        {
+          tag: 'group-button',
+          attr: [{ name: ':buttons', attr: 'buttons' }],
+          body: [
+            {
+              codeContent: [
+                {
+                  codeContentBeginTitle: 'buttons: [',
+                  codeContentInside: [
+                    {
+                      codeContentStructBegin: '{',
+                      codeContentInsideName: 'id: 0, buttonAttr: {...}',
+                      codeContentStructEnd: '}'
+                    }
+                  ],
+                  codeContentEndTitle: ']'
+                },
+                {
+                  codeContentBeginTitle: 'buttons: [',
+                  codeContentInside: [
+                    {
+                      codeContentStructBegin: '{',
+                      codeContentInsideName: 'id: 1, buttonAttr: {...}',
+                      codeContentStructEnd: '}'
+                    }
+                  ],
+                  codeContentEndTitle: ']'
+                },
+                {
+                  codeContentBeginTitle: 'buttons: [',
+                  codeContentInside: [
+                    {
+                      codeContentStructBegin: '{',
+                      codeContentInsideName: 'id: 2, buttonAttr: {...}',
+                      codeContentStructEnd: '}'
+                    }
+                  ],
+                  codeContentEndTitle: ']'
+                }
+              ]
+            }
+          ]
+        }
+      ],
       isShowCode: false,
       isShowBanCode: false,
+      isShowTextCode: false,
+      isShowGroupButtonCode: false,
       iconButtons: [
         {
           buttonAttr: {
@@ -542,6 +719,35 @@ export default {
               icon: 'fa fa-trash'
             },
             type: 'base-button-danger'
+          }
+        }
+      ],
+      iconGroupButtons: [
+        {
+          id: 0,
+          buttonAttr: {
+            pre: {
+              icon: 'fa fa-edit'
+            },
+            type: 'base-button-primary'
+          }
+        },
+        {
+          id: 1,
+          buttonAttr: {
+            pre: {
+              icon: 'fa fa-share-alt'
+            },
+            type: 'base-button-primary'
+          }
+        },
+        {
+          id: 2,
+          buttonAttr: {
+            pre: {
+              icon: 'fa fa-trash'
+            },
+            type: 'base-button-primary'
           }
         }
       ],
@@ -600,15 +806,62 @@ export default {
           }
         }
       ],
+      textButtons: [
+        {
+          buttonAttr: {
+            label: '文字按钮',
+            type: 'base-button-text'
+          }
+        },
+        {
+          buttonAttr: {
+            label: '文字按钮',
+            type: 'base-button-text',
+            disabled: true
+          }
+        }
+      ],
+      groupButtons: [
+        {
+          id: 0,
+          buttonAttr: {
+            pre: {
+              icon: 'fa fa-angle-left'
+            },
+            label: '上一页',
+            type: 'base-button-primary'
+          }
+        },
+        {
+          id: 1,
+          buttonAttr: {
+            suf: {
+              icon: 'fa fa-angle-right'
+            },
+            label: '下一页',
+            type: 'base-button-primary'
+          }
+        }
+      ],
       codeControllerIcon: 'fa fa-plus-circle',
       codeControllerLabel: '显示代码',
       banCodeControllerIcon: 'fa fa-plus-circle',
-      banCodeControllerLabel: '显示代码'
+      banCodeControllerLabel: '显示代码',
+      textCodeControllerIcon: 'fa fa-plus-circle',
+      textCodeControllerLabel: '显示代码',
+      groupButtonCodeControllerIcon: 'fa fa-plus-circle',
+      groupButtonCodeControllerLabel: '显示代码'
     }
   },
   methods: {
     click({ label }) {
       console.log(label)
+    },
+    clickGroupButton(obj) {
+      console.log(obj)
+    },
+    clickIconGroupButton(obj) {
+      console.log(obj)
     },
     showCode() {
       this.isShowCode = true
@@ -629,6 +882,26 @@ export default {
       this.isShowBanCode = false
       this.banCodeControllerIcon = 'fa fa-plus-circle'
       this.banCodeControllerLabel = '显示代码'
+    },
+    showTextCode() {
+      this.isShowTextCode = true
+      this.textCodeControllerIcon = 'fa fa-minus-circle'
+      this.textCodeControllerLabel = '隐藏代码'
+    },
+    hideTextCode() {
+      this.isShowTextCode = false
+      this.textCodeControllerIcon = 'fa fa-plus-circle'
+      this.textCodeControllerLabel = '显示代码'
+    },
+    showGroupButtonCode() {
+      this.isShowGroupButtonCode = true
+      this.groupButtonCodeControllerIcon = 'fa fa-minus-circle'
+      this.groupButtonCodeControllerLabel = '隐藏代码'
+    },
+    hideGroupButtonCode() {
+      this.isShowGroupButtonCode = false
+      this.groupButtonCodeControllerIcon = 'fa fa-plus-circle'
+      this.groupButtonCodeControllerLabel = '显示代码'
     }
   }
 }
