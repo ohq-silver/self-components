@@ -6,6 +6,7 @@
       :showContent="showContent"
       @clickeTitle="clickeTitle"
     ></nav-menu-components>
+    <!-- <base-button :buttonAttr="buttonAttr"></base-button> -->
   </div>
 </template>
 
@@ -13,10 +14,12 @@
 import UsingComponents from '../mixins/UsingComponents'
 import NavMenuComponents from '../../../navMenuComponents/src/components/NavMenuComponents'
 // import Icon from '../../../iconComponents/src/components/Icon'
+// import BaseButton from '../../../buttonComponents/src/components/BaseButton'
 
 export default {
   components: {
     // Icon,
+    // BaseButton,
     NavMenuComponents
   },
   mixins: [UsingComponents],
@@ -28,6 +31,13 @@ export default {
         { id: 3, title: 'Layout 布局' }
       ],
       showContent: 'Button'
+      // buttonAttr: {
+      //   pre: {
+      //     icon: 'fa fa-search'
+      //   },
+      //   type: 'base-button-danger',
+      //   label: '默认按钮'
+      // }
     }
   },
   methods: {

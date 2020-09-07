@@ -92,20 +92,182 @@ export default {
         {
           tag: 'base-button',
           attr: [{ name: ':buttonAttr', attr: 'buttonAttr' }],
-          body: [{ text: '1' }]
+          body: [
+            {
+              codeContentDescribe: '// 在data中调用',
+              codeContent: [
+                {
+                  codeContentBeginTitle: 'buttonAttr: {',
+                  codeContentInside: [
+                    {
+                      codeContentStructBegin: 'pre: {',
+                      codeContentInsideName: 'icon: ',
+                      codeContentInsideAttr: 'fa fa-search',
+                      codeContentStructEnd: '}'
+                    },
+                    {
+                      codeContentInsideName: 'label: ',
+                      codeContentInsideAttr: '默认按钮'
+                    }
+                  ],
+                  codeContentEndTitle: '}'
+                }
+              ]
+            }
+          ]
         },
         {
           tag: 'base-button',
-          attr: [{ name: ':buttonAttr', attr: 'buttonAttr' }]
+          attr: [{ name: ':buttonAttr', attr: 'buttonAttr' }],
+          body: [
+            {
+              codeContentDescribe: '// 在data中调用',
+              codeContent: [
+                {
+                  codeContentBeginTitle: 'buttonAttr: {',
+                  codeContentInside: [
+                    {
+                      codeContentStructBegin: 'suf: {',
+                      codeContentInsideName: 'icon: ',
+                      codeContentInsideAttr: 'fa fa-search',
+                      codeContentStructEnd: '}'
+                    },
+                    {
+                      codeContentInsideName: 'label: ',
+                      codeContentInsideAttr: '默认按钮'
+                    }
+                  ],
+                  codeContentEndTitle: '}'
+                }
+              ]
+            }
+          ]
+        },
+        {
+          tag: 'base-button',
+          attr: [{ name: ':buttonAttr', attr: 'buttonAttr' }],
+          body: [
+            {
+              codeContentDescribe: '// 在data中调用',
+              codeContent: [
+                {
+                  codeContentBeginTitle: 'buttonAttr: {',
+                  codeContentInside: [
+                    {
+                      codeContentInsideName: 'type: ',
+                      codeContentInsideAttr: 'base-button-primary'
+                    },
+                    {
+                      codeContentInsideName: 'label: ',
+                      codeContentInsideAttr: '主要按钮'
+                    }
+                  ],
+                  codeContentEndTitle: '}'
+                }
+              ]
+            }
+          ]
+        },
+        {
+          tag: 'base-button',
+          attr: [{ name: ':buttonAttr', attr: 'buttonAttr' }],
+          body: [
+            {
+              codeContentDescribe: '// 在data中调用',
+              codeContent: [
+                {
+                  codeContentBeginTitle: 'buttonAttr: {',
+                  codeContentInside: [
+                    {
+                      codeContentInsideName: 'type: ',
+                      codeContentInsideAttr: 'base-button-success'
+                    },
+                    {
+                      codeContentInsideName: 'label: ',
+                      codeContentInsideAttr: '成功按钮'
+                    }
+                  ],
+                  codeContentEndTitle: '}'
+                }
+              ]
+            }
+          ]
+        },
+        {
+          tag: 'base-button',
+          attr: [{ name: ':buttonAttr', attr: 'buttonAttr' }],
+          body: [
+            {
+              codeContentDescribe: '// 在data中调用',
+              codeContent: [
+                {
+                  codeContentBeginTitle: 'buttonAttr: {',
+                  codeContentInside: [
+                    {
+                      codeContentInsideName: 'type: ',
+                      codeContentInsideAttr: 'base-button-message'
+                    },
+                    {
+                      codeContentInsideName: 'label: ',
+                      codeContentInsideAttr: '信息按钮'
+                    }
+                  ],
+                  codeContentEndTitle: '}'
+                }
+              ]
+            }
+          ]
+        },
+        {
+          tag: 'base-button',
+          attr: [{ name: ':buttonAttr', attr: 'buttonAttr' }],
+          body: [
+            {
+              codeContentDescribe: '// 在data中调用',
+              codeContent: [
+                {
+                  codeContentBeginTitle: 'buttonAttr: {',
+                  codeContentInside: [
+                    {
+                      codeContentInsideName: 'type: ',
+                      codeContentInsideAttr: 'base-button-warning'
+                    },
+                    {
+                      codeContentInsideName: 'label: ',
+                      codeContentInsideAttr: '警告按钮'
+                    }
+                  ],
+                  codeContentEndTitle: '}'
+                }
+              ]
+            }
+          ]
+        },
+        {
+          tag: 'base-button',
+          attr: [{ name: ':buttonAttr', attr: 'buttonAttr' }],
+          body: [
+            {
+              codeContentDescribe: '// 在data中调用',
+              codeContent: [
+                {
+                  codeContentBeginTitle: 'buttonAttr: {',
+                  codeContentInside: [
+                    {
+                      codeContentInsideName: 'type: ',
+                      codeContentInsideAttr: 'base-button-danger'
+                    },
+                    {
+                      codeContentInsideName: 'label: ',
+                      codeContentInsideAttr: '危险按钮'
+                    }
+                  ],
+                  codeContentEndTitle: '}'
+                }
+              ]
+            }
+          ]
         }
-        // {
-        //   tag: 'icon',
-        //   attr: [{ name: 'icon', attr: 'fa fa-edit' }]
-        // },
-        // {
-        //   tag: 'icon',
-        //   attr: [{ name: 'icon', attr: 'fa fa-search' }]
-        // }
       ],
       isShowCode: false,
       codeControllerIcon: 'fa fa-plus-circle',

@@ -12,6 +12,21 @@
 .code-components-open-tag {
   margin-left: 1em;
 }
+.code-components-code-body-content {
+  margin-left: 1em;
+  margin-top: 0.5em;
+}
+.code-components-code-body-content-describe {
+  color: green;
+}
+.code-components-code-body-content-inside-struct-begin,
+.code-components-code-body-content-inside-struct-end,
+.code-components-code-body-content-inside-name--no-struct {
+  margin-left: 1em;
+}
+.code-components-code-body-content-inside-name {
+  margin-left: 2em;
+}
 .code-components-open-tag-attr {
   color: #636
 }

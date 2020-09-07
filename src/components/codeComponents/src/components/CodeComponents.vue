@@ -12,11 +12,11 @@
         <code-components-close-tag
           :tag="tag"
         ></code-components-close-tag>
-        <code-components-code-body
-          v-if="body"
-          :body="body"
-        ></code-components-code-body>
       </div>
+      <code-components-code-body
+        v-if="body"
+        :body="body"
+      ></code-components-code-body>
   </div>
 </template>
 
