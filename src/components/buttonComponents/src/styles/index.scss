@@ -1,13 +1,20 @@
+//引入加载按钮样式
+@import '../styles/ladda.scss';
+.ladda-label {
+  width: 100%;
+}
 //控制循环显示的button横向排列，并设置间距
 .button-box,
 .icon-button-box,
 .ban-button-box,
-.group-button-box {
+.group-button-box,
+.ladda-button-box {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between; //设置每个子元素的间距
   border: 1px solid #ebebeb;
   padding: 1em 1em;
+  margin-top: 1em;
 }
 .text-button-box {
   border: 1px solid #ebebeb;

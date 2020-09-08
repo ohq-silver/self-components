@@ -28,7 +28,7 @@ export default {
   },
   methods: {
     click(obj) {
-      this.$emit('click', obj.buttonAttr)
+      this.$emit('click', { button: this, buttonAttr: obj.buttonAttr })
       this.selected = obj.id
     }
   }

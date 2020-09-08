@@ -1,8 +1,11 @@
 <template>
   <button
-    :class="'base-button ' + buttonType + ' ' + buttonBan"
-    @click="click"
+    ref="ladda-button"
+    :class="'base-button ' + buttonType + ' ' + buttonBan + ' ' + buttonLadda"
+    :data-style="laddaStyle"
+    :data-spinner-color="laddaSpinnerColor"
     :disabled="disabled"
+    @click="click"
   >
     <div
       class="base-button-content"
@@ -29,7 +32,9 @@
 
 <script>
 import Icon from '../../../iconComponents/src/components/Icon'
+import LaddaMixin from '../mixins/LaddaMixin.js'
 export default {
+  mixins: [LaddaMixin],
   props: {
     buttonAttr: { type: Object, default: () => ({}) }
   },
@@ -61,11 +66,18 @@ export default {
         return 'base-button-ban'
       }
       return ''
+    },
+    buttonLadda() {
+      if (this.ladda !== null) {
+        return 'ladda-button'
+      }
+      return ''
     }
   },
   methods: {
-    click({ button }) {
-      this.$emit('click', { button, label: this.label })
+    click(e) {
+      e.preventDefault()
+      this.$emit('click', { button: this })
     }
   }
 }

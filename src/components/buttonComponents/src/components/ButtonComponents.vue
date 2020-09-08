@@ -91,16 +91,37 @@
       @showCode="showGroupButtonCode"
       @hideCode="hideGroupButtonCode"
     ></code-controller>
+    <h3>加载按钮</h3>
+    <div>是基于ladda封装的加载按钮，可以选择多种ladda样式</div>
+    <div
+      class="ladda-button-box"
+    >
+    <base-button
+      v-for="(item, idx) in laddaButtons"
+      :key="idx"
+      :buttonAttr="item.buttonAttr"
+      :ladda="item.ladda"
+      @click="clickLaddaButton"
+    ></base-button>
+    </div>
+    <code-controller
+      :codes="laddaButtonCodes"
+      :codeControllerIcon="laddaButtonCodeControllerIcon"
+      :codeControllerLabel="laddaButtonCodeControllerLabel"
+      :isShowCode="isShowLaddaButtonCode"
+      @showCode="showLaddaButtonCode"
+      @hideCode="hideLaddaButtonCode"
+    ></code-controller>
   </div>
 </template>
 
 <script>
 
 import ButtonComponents from '../mixins/ButtonComponents'
+import CodeController from '../../../codeController/src/components/CodeController'
 
 import BaseButton from './BaseButton'
 import GroupButton from './GroupButton'
-import CodeController from '../../../codeController/src/components/CodeController'
 
 export default {
   components: {
@@ -111,54 +132,6 @@ export default {
   mixins: [ButtonComponents],
   data() {
     return {
-      buttons: [
-        {
-          buttonAttr: {
-            pre: {
-              icon: 'fa fa-search'
-            },
-            label: '默认按钮'
-          }
-        },
-        {
-          buttonAttr: {
-            suf: {
-              icon: 'fa fa-search'
-            },
-            label: '默认按钮'
-          }
-        },
-        {
-          buttonAttr: {
-            label: '主要按钮',
-            type: 'base-button-primary'
-          }
-        },
-        {
-          buttonAttr: {
-            label: '成功按钮',
-            type: 'base-button-success'
-          }
-        },
-        {
-          buttonAttr: {
-            label: '信息按钮',
-            type: 'base-button-message'
-          }
-        },
-        {
-          buttonAttr: {
-            label: '警告按钮',
-            type: 'base-button-warning'
-          }
-        },
-        {
-          buttonAttr: {
-            label: '危险按钮',
-            type: 'base-button-danger'
-          }
-        }
-      ],
       banCodes: [
         {
           tag: 'base-button',
@@ -669,10 +642,283 @@ export default {
           ]
         }
       ],
+      laddaButtonCodes: [
+        {
+          tag: 'base-button',
+          attr: [
+            {
+              name: ':buttonAttr',
+              attr: 'buttonAttr'
+            },
+            {
+              name: ':ladda',
+              attr: 'ladda'
+            },
+            {
+              name: '@click',
+              attr: 'click'
+            }
+          ],
+          body: [
+            {
+              codeContentDescribe: '// 在click方法中调用start将会开始加载，调用stop会停止加载',
+              codeContent: [
+                {
+                  codeContentBeginTitle: 'buttonAttr: {',
+                  codeContentInside: [
+                    {
+                      codeContentInsideName: 'label: ',
+                      codeContentInsideAttr: '加载按钮'
+                    },
+                    {
+                      codeContentInsideName: 'type: ',
+                      codeContentInsideAttr: 'base-button-primary'
+                    }
+                  ],
+                  codeContentEndTitle: '}'
+                },
+                {
+                  codeContentBeginTitle: 'ladda: {',
+                  codeContentInside: [
+                    {
+                      codeContentInsideName: 'spinnerColor: ',
+                      codeContentInsideAttr: '#fff'
+                    }
+                  ],
+                  codeContentEndTitle: '}'
+                },
+                {
+                  codeContentBeginTitle: 'click({ button }) {',
+                  codeContentInside: [
+                    {
+                      codeContentInsideName: 'button.start()'
+                    },
+                    {
+                      codeContentInsideName: 'button.stop()'
+                    }
+                  ],
+                  codeContentEndTitle: '}'
+                }
+              ]
+            }
+          ]
+        },
+        {
+          tag: 'base-button',
+          attr: [
+            {
+              name: ':buttonAttr',
+              attr: 'buttonAttr'
+            },
+            {
+              name: ':ladda',
+              attr: 'ladda'
+            }
+          ],
+          body: [
+            {
+              codeContent: [
+                {
+                  codeContentBeginTitle: 'buttonAttr: {',
+                  codeContentInside: [
+                    {
+                      codeContentInsideName: 'label: ',
+                      codeContentInsideAttr: '加载按钮'
+                    },
+                    {
+                      codeContentInsideName: 'type: ',
+                      codeContentInsideAttr: 'base-button-primary'
+                    }
+                  ],
+                  codeContentEndTitle: '}'
+                },
+                {
+                  codeContentBeginTitle: 'ladda: {',
+                  codeContentInside: [
+                    {
+                      codeContentInsideName: 'spinnerColor: ',
+                      codeContentInsideAttr: '#fff'
+                    },
+                    {
+                      codeContentInsideName: 'style: ',
+                      codeContentInsideAttr: 'zoom-out'
+                    }
+                  ],
+                  codeContentEndTitle: '}'
+                }
+              ]
+            }
+          ]
+        },
+        {
+          tag: 'base-button',
+          attr: [
+            {
+              name: ':buttonAttr',
+              attr: 'buttonAttr'
+            },
+            {
+              name: ':ladda',
+              attr: 'ladda'
+            }
+          ],
+          body: [
+            {
+              codeContent: [
+                {
+                  codeContentBeginTitle: 'buttonAttr: {',
+                  codeContentInside: [
+                    {
+                      codeContentInsideName: 'label: ',
+                      codeContentInsideAttr: '加载按钮'
+                    }
+                  ],
+                  codeContentEndTitle: '}'
+                },
+                {
+                  codeContentBeginTitle: 'ladda: {',
+                  codeContentInside: [
+                    {
+                      codeContentInsideName: 'style: ',
+                      codeContentInsideAttr: 'slide-left'
+                    }
+                  ],
+                  codeContentEndTitle: '}'
+                }
+              ]
+            }
+          ]
+        },
+        {
+          tag: 'base-button',
+          attr: [
+            {
+              name: ':buttonAttr',
+              attr: 'buttonAttr'
+            },
+            {
+              name: ':ladda',
+              attr: 'ladda'
+            }
+          ],
+          body: [
+            {
+              codeContent: [
+                {
+                  codeContentBeginTitle: 'buttonAttr: {',
+                  codeContentInside: [
+                    {
+                      codeContentInsideName: 'label: ',
+                      codeContentInsideAttr: '加载按钮'
+                    }
+                  ],
+                  codeContentEndTitle: '}'
+                },
+                {
+                  codeContentBeginTitle: 'ladda: {',
+                  codeContentInside: [
+                    {
+                      codeContentInsideName: 'style: ',
+                      codeContentInsideAttr: 'slide-right'
+                    }
+                  ],
+                  codeContentEndTitle: '}'
+                }
+              ]
+            }
+          ]
+        }
+      ],
       isShowCode: false,
       isShowBanCode: false,
       isShowTextCode: false,
       isShowGroupButtonCode: false,
+      isShowLaddaButtonCode: false,
+      laddaButtons: [
+        {
+          buttonAttr: {
+            type: 'base-button-primary',
+            label: '加载按钮'
+          },
+          ladda: {
+            spinnerColor: '#fff'
+          }
+        },
+        {
+          buttonAttr: {
+            type: 'base-button-primary',
+            label: '加载按钮'
+          },
+          ladda: {
+            style: 'zoom-out',
+            spinnerColor: '#fff'
+          }
+        },
+        {
+          buttonAttr: {
+            label: '加载按钮'
+          },
+          ladda: {
+            style: 'slide-left'
+          }
+        },
+        {
+          buttonAttr: {
+            label: '加载按钮'
+          },
+          ladda: {
+            style: 'slide-right'
+          }
+        }
+      ],
+      buttons: [
+        {
+          buttonAttr: {
+            pre: {
+              icon: 'fa fa-search'
+            },
+            label: '默认按钮'
+          }
+        },
+        {
+          buttonAttr: {
+            suf: {
+              icon: 'fa fa-search'
+            },
+            label: '默认按钮'
+          }
+        },
+        {
+          buttonAttr: {
+            label: '主要按钮',
+            type: 'base-button-primary'
+          }
+        },
+        {
+          buttonAttr: {
+            label: '成功按钮',
+            type: 'base-button-success'
+          }
+        },
+        {
+          buttonAttr: {
+            label: '信息按钮',
+            type: 'base-button-message'
+          }
+        },
+        {
+          buttonAttr: {
+            label: '警告按钮',
+            type: 'base-button-warning'
+          }
+        },
+        {
+          buttonAttr: {
+            label: '危险按钮',
+            type: 'base-button-danger'
+          }
+        }
+      ],
       iconButtons: [
         {
           buttonAttr: {
@@ -850,18 +1096,28 @@ export default {
       textCodeControllerIcon: 'fa fa-plus-circle',
       textCodeControllerLabel: '显示代码',
       groupButtonCodeControllerIcon: 'fa fa-plus-circle',
-      groupButtonCodeControllerLabel: '显示代码'
+      groupButtonCodeControllerLabel: '显示代码',
+      laddaButtonCodeControllerIcon: 'fa fa-plus-circle',
+      laddaButtonCodeControllerLabel: '显示代码'
     }
   },
   methods: {
-    click({ label }) {
-      console.log(label)
+    click({ button }) {
+      console.log(button)
     },
     clickGroupButton(obj) {
       console.log(obj)
     },
-    clickIconGroupButton(obj) {
-      console.log(obj)
+    clickIconGroupButton({ button }) {
+      console.log(button)
+    },
+    clickLaddaButton({ button }) {
+      console.log(button)
+      button.start()
+      setTimeout(() => {
+        button.stop()
+        // do something with button
+      }, 3000)
     },
     showCode() {
       this.isShowCode = true
@@ -902,6 +1158,16 @@ export default {
       this.isShowGroupButtonCode = false
       this.groupButtonCodeControllerIcon = 'fa fa-plus-circle'
       this.groupButtonCodeControllerLabel = '显示代码'
+    },
+    showLaddaButtonCode() {
+      this.isShowLaddaButtonCode = true
+      this.laddaButtonCodeControllerIcon = 'fa fa-minus-circle'
+      this.laddaButtonCodeControllerLabel = '隐藏代码'
+    },
+    hideLaddaButtonCode() {
+      this.isShowLaddaButtonCode = false
+      this.laddaButtonCodeControllerIcon = 'fa fa-plus-circle'
+      this.laddaButtonCodeControllerLabel = '显示代码'
     }
   }
 }
