@@ -11,8 +11,11 @@
 
 <script>
 import ButtonComponents from '../../../buttonComponents/src/components/ButtonComponents'
+import BorderComponents from '../../../borderComponents/src/components/BorderComponents'
+import ColorComponents from '../../../colorComponents/src/components/ColorComponents'
 import IconComponents from '../../../iconComponents/src/components/IconComponents'
 import LayoutComponents from '../../../layoutComponents/src/components/LayoutComponents'
+import LinkComponents from '../../../linkComponents/src/components/LinkComponents'
 export default {
   props: {
     showContent: { type: String, default: '' }
@@ -32,10 +35,16 @@ export default {
       switch (this.currentComponent) {
         case 'Button':
           return ButtonComponents
+        case 'Border':
+          return BorderComponents
+        case 'Color':
+          return ColorComponents
         case 'Icon':
           return IconComponents
         case 'Layout':
           return LayoutComponents
+        case 'Link':
+          return LinkComponents
         default:
           return null
       }

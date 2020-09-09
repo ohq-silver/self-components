@@ -52,9 +52,11 @@
 .base-button:focus {
   outline: none;
 }
-.base-button:hover,
-.group-button-active {
+.base-button:hover {
   opacity: 0.7;
+}
+.group-button-active {
+  opacity: 0.8;
 }
 .base-button-ban {
   opacity: 0.5;

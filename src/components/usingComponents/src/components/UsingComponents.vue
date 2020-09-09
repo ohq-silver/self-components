@@ -27,8 +27,11 @@ export default {
     return {
       titles: [
         { id: 1, title: 'Button 按钮' },
-        { id: 2, title: 'Icon 图标' },
-        { id: 3, title: 'Layout 布局' }
+        { id: 2, title: 'Border 边框' },
+        { id: 3, title: 'Color 色彩' },
+        { id: 4, title: 'Icon 图标' },
+        { id: 5, title: 'Layout 布局' },
+        { id: 6, title: 'Link 文字链接' }
       ],
       showContent: 'Button'
       // buttonAttr: {

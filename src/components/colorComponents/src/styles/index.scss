@@ -1,0 +1,152 @@
+.main-color-box {
+  width: 20%;
+  height: 70px;
+  margin-top: 1em;
+  border-radius: 4px;
+  background-color: #069;
+  color: #fff;
+}
+.inside {
+  width: 50%;
+  height: 40px;
+  padding-top: 15px;
+  padding-left: 20px;
+}
+.auxiliary-color-box,
+.neutral-color-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; //设置每个子元素的间距
+}
+.neutral-color-box:after {
+  content: '';
+  width: 20%;
+}
+.success-color-box {
+  width: 20%;
+  height: 70px;
+  margin-top: 1em;
+  border-radius: 4px;
+  background-color: #00993b;
+  color: #fff;
+}
+.info-color-box {
+  width: 20%;
+  height: 70px;
+  margin-top: 1em;
+  border-radius: 4px;
+  background-color: #999;
+  color: #fff;
+}
+.warning-color-box {
+  width: 20%;
+  height: 70px;
+  margin-top: 1em;
+  border-radius: 4px;
+  background-color: rgba(255,136,0,0.877);
+  color: #fff;
+}
+.danger-color-box {
+  width: 20%;
+  height: 70px;
+  margin-top: 1em;
+  border-radius: 4px;
+  background-color: #c33;
+  color: #fff;
+}
+.main-text-box {
+  width: 20%;
+  height: 70px;
+  margin-top: 1em;
+  border-radius: 4px;
+  background-color: #303133;
+  color: #fff;
+}
+.normal-text-box {
+  width: 20%;
+  height: 70px;
+  margin-top: 1em;
+  margin-left: 0.5em;
+  border-radius: 4px;
+  background-color: #606266;
+  color: #fff;
+}
+.secondary-text-box {
+  width: 20%;
+  height: 70px;
+  margin-top: 1em;
+  margin-left: 0.5em;
+  border-radius: 4px;
+  background-color: #909399;
+  color: #fff;
+}
+.seize-seat-text-box {
+  width: 20%;
+  height: 70px;
+  margin-top: 1em;
+  margin-left: 0.5em;
+  border-radius: 4px;
+  background-color: #C0C4CC;
+  color: #fff;
+}
+.first-text-box {
+  width: 20%;
+  height: 70px;
+  margin-top: 1em;
+  border-radius: 4px;
+  background-color: #DCDFE6;
+  color: #999;
+}
+.second-text-box {
+  width: 20%;
+  height: 70px;
+  margin-top: 1em;
+  margin-left: 0.5em;
+  border-radius: 4px;
+  background-color: #E4E7ED;
+  color: #999;
+}
+.third-text-box {
+  width: 20%;
+  height: 70px;
+  margin-top: 1em;
+  margin-left: 0.5em;
+  border-radius: 4px;
+  background-color: #EBEEF5;
+  color: #999;
+}
+.fourth-text-box {
+  width: 20%;
+  height: 70px;
+  margin-top: 1em;
+  margin-left: 0.5em;
+  border-radius: 4px;
+  background-color: #F2F6FC;
+  color: #999;
+}
+.base-black-box {
+  width: 20%;
+  height: 70px;
+  margin-top: 1em;
+  border-radius: 4px;
+  background-color: #000;
+  color: #fff;
+}
+.base-white-box {
+  width: 20%;
+  height: 70px;
+  margin-top: 1em;
+  border: 1px solid #ebebeb;
+  border-radius: 4px;
+  background-color: #FFF;
+  color: #999;
+}
+.transparent-box {
+  width: 20%;
+  height: 70px;
+  margin-top: 1em;
+  border: 1px solid #ebebeb;
+  border-radius: 4px;
+  background-color: transparent;
+  color: #999;
+}
