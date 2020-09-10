@@ -1,1 +1,100 @@
-
+.base-link-box,
+.base-link-ban-box,
+.base-link-under-line-box,
+.base-link-icon-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start; //设置每个子元素的间距
+  border: 1px solid #ebebeb;
+  padding: 1em 1em;
+  margin-top: 1em;
+}
+.base-link {
+  margin-left: 0.5em;
+  width: 7%;
+}
+.base-link-content {
+  display: flex;
+}
+.base-link-icon {
+  padding: 0.2em 0.2em;
+  margin: 0 auto;
+}
+.base-link-label {
+  margin: 0 auto;
+}
+//默认链接
+.base-link-default {
+  color: #000;
+  text-decoration: none;
+}
+.base-link-default:hover {
+  opacity: 0.7;
+  text-decoration: underline;
+  text-decoration-color: rgba(0,0,0,0.7);
+}
+//主要链接
+.base-link-primary {
+  color: #069;
+  text-decoration: none;
+}
+.base-link-primary:hover {
+  opacity: 0.7;
+  text-decoration: underline;
+  text-decoration-color: rgba(0,102,153,0.7);
+}
+//成功链接
+.base-link-success {
+  color: #00993b;
+  text-decoration: none;
+}
+.base-link-success:hover {
+  opacity: 0.7;
+  text-decoration: underline;
+  text-decoration-color: rgba(0,153,59,0.7);
+}
+//信息链接
+.base-link-message {
+  color: #999;
+  text-decoration: none;
+}
+.base-link-message:hover {
+  opacity: 0.7;
+  text-decoration: underline;
+  text-decoration-color: rgba(153,153,153,0.7);
+}
+//警告链接
+.base-link-warning {
+  color: rgba(255,136,0,0.877);
+  text-decoration: none;
+}
+.base-link-warning:hover {
+  opacity: 0.7;
+  text-decoration: underline;
+  text-decoration-color: rgba(255,136,0,0.7);
+}
+//危险链接
+.base-link-danger {
+  color: #c33;
+  text-decoration: none;
+}
+.base-link-danger:hover {
+  opacity: 0.7;
+  text-decoration: underline;
+  text-decoration-color: rgba(204,51,51,0.7);
+}
+//链接禁用状态
+.base-link-disabled,
+.base-link-disabled .base-link-icon,
+.base-link-disabled .base-link-label {
+  opacity: 0.5;
+}
+.base-link-disabled:hover {
+  opacity: 0.5;
+  text-decoration: none;
+  cursor: not-allowed;
+}
+//无下划线
+.base-link-hide-under-line:hover {
+  text-decoration: none;
+}

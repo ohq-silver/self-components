@@ -6,7 +6,16 @@
       :showContent="showContent"
       @clickeTitle="clickeTitle"
     ></nav-menu-components>
-    <!-- <base-button :buttonAttr="buttonAttr"></base-button> -->
+    <!-- <base-button :buttonAttr="buttonAttr"></base-button>
+    <base-link
+      :disabled="link.disabled"
+      :href="link.href"
+      :label="link.label"
+      :type="link.type"
+      :preIcon="link.preIcon"
+      :sufIcon="link.sufIcon"
+      :target="link.target"
+    ></base-link> -->
   </div>
 </template>
 
@@ -15,11 +24,13 @@ import UsingComponents from '../mixins/UsingComponents'
 import NavMenuComponents from '../../../navMenuComponents/src/components/NavMenuComponents'
 // import Icon from '../../../iconComponents/src/components/Icon'
 // import BaseButton from '../../../buttonComponents/src/components/BaseButton'
+// import BaseLink from '../../../linkComponents/src/components/BaseLink'
 
 export default {
   components: {
     // Icon,
     // BaseButton,
+    // BaseLink,
     NavMenuComponents
   },
   mixins: [UsingComponents],
@@ -34,13 +45,23 @@ export default {
         { id: 6, title: 'Link 文字链接' }
       ],
       showContent: 'Button'
-      // buttonAttr: {
-      //   pre: {
-      //     icon: 'fa fa-search'
-      //   },
-      //   type: 'base-button-danger',
-      //   label: '默认按钮'
-      // }
+    //   buttonAttr: {
+    //     pre: {
+    //       icon: 'fa fa-search'
+    //     },
+    //     type: 'base-button-success',
+    //     disabled: true,
+    //     label: '默认按钮'
+    //   },
+    //   link: {
+    //     href: '#',
+    //     label: '默认链接',
+    //     disabled: true,
+    //     underLine: true,
+    //     preIcon: 'fa fa-eye',
+    //     type: 'primary',
+    //     target: '_blank'
+    //   }
     }
   },
   methods: {
