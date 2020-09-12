@@ -1,0 +1,26 @@
+.base-radio-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start; //设置每个子元素的间距
+  align-items: center;
+  border: 1px solid #ebebeb;
+  padding: 1em 1em;
+  margin-top: 1em;
+}
+.base-radio {
+  display: flex;
+  width: 7%;
+  margin-left: 1em;
+  cursor: pointer;
+}
+.base-radio-input {
+  margin: 0.4em auto;
+}
+.base-radio-checked {
+  color: #069;
+}
+.base-radio-disabled {
+  color: #2C3E50;
+  opacity: 0.5;
+  cursor: not-allowed;
+}
