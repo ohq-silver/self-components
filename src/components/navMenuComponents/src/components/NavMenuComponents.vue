@@ -3,6 +3,7 @@
   >
     <nav-menu-components-titles
       :titles="titles"
+      :describe="describe"
       @clickTitle="clickTitle"
     ></nav-menu-components-titles>
     <nav-menu-components-content
@@ -23,7 +24,8 @@ export default {
   },
   props: {
     titles: { type: Array, default: () => ([]) },
-    showContent: { type: String, default: '' }
+    showContent: { type: String, default: '' },
+    describe: { type: String, default: '' }
   },
   mixins: [NavMenuComponents],
   data() {
@@ -32,7 +34,7 @@ export default {
   },
   methods: {
     clickTitle(obj) {
-      this.$emit('clickeTitle', obj)
+      this.$emit('clickedTitle', obj)
     }
   }
 }

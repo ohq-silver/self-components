@@ -16,6 +16,7 @@ import ColorComponents from '../../../colorComponents/src/components/ColorCompon
 import IconComponents from '../../../iconComponents/src/components/IconComponents'
 import LayoutComponents from '../../../layoutComponents/src/components/LayoutComponents'
 import LinkComponents from '../../../linkComponents/src/components/LinkComponents'
+import RadioComponents from '../../../radioComponents/src/components/RadioComponents'
 export default {
   props: {
     showContent: { type: String, default: '' }
@@ -45,6 +46,8 @@ export default {
           return LayoutComponents
         case 'Link':
           return LinkComponents
+        case 'Radio':
+          return RadioComponents
         default:
           return null
       }

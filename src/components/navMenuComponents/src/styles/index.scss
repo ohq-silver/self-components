@@ -4,17 +4,24 @@
 .nav-menu-components-titles {
   width: 13%;
 }
+.nav-menu-components-titles h6 {
+  width: 47.5%;
+  color: #999;
+  text-align: left;
+}
 .nav-menu-components-content {
   width: 87%;
   margin: 1.5em;
 }
 .nav-menu-components-title {
   margin-top: 1.5em;
-  text-align: center;
-  cursor: pointer;
+  text-align: left;
 }
 .nav-menu-components-title-default:hover,
 .nav-menu-components-title-active {
   color: #069;
 }
-
+.nav-menu-components-title-active,
+.nav-menu-components-title-default {
+  cursor: pointer;
+}

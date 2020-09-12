@@ -6,10 +6,19 @@
       class="nav-menu-components-title"
       v-for="(item, idx) in titles"
       :key="idx"
-      :class='item.id===selected ? "nav-menu-components-title-active" : "nav-menu-components-title-default"'
       @click="clickTitle(item)"
     >
-      {{ item.title }}
+      <h6
+        v-if="item.describe"
+      >
+        {{ item.describe }}
+      </h6>
+      <div
+        v-if="item.id"
+        :class='item.id===selected ? "nav-menu-components-title-active" : "nav-menu-components-title-default"'
+      >
+        {{ item.title }}
+      </div>
     </div>
   </div>
 </template>
@@ -17,7 +26,8 @@
 <script>
 export default {
   props: {
-    titles: { type: Array, default: () => ([]) }
+    titles: { type: Array, default: () => ([]) },
+    describe: { type: String, default: '' }
   },
   data() {
     return {
