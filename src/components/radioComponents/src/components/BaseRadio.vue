@@ -1,10 +1,10 @@
 <template>
   <label
-    class="base-radio"
+    :class="'base-radio ' + disabledClass"
     @click="click"
   >
     <input
-      class="base-radio-input"
+      :class="'base-radio-input ' + hideInputClass + ' ' +  disabledClass"
       type="radio"
       :value="value"
       :name="name"
@@ -13,7 +13,7 @@
       @change="change"
     />
     <div
-      :class="checkedClass + ' ' + disabledClass"
+      :class="'base-radio-label ' + checkedClass + ' ' + disabledClass + ' ' + isHideInputLabelClass"
     >
       {{ label }}
     </div>
@@ -26,6 +26,7 @@ export default {
     value: { type: String, default: '' },
     label: { type: String, default: '' },
     name: { type: String, default: '' },
+    hideInput: { type: Boolean, default: false },
     disabled: { type: Boolean, default: false },
     checked: { type: Boolean, default: false }
   },
@@ -51,6 +52,18 @@ export default {
     disabledClass() {
       if (this.disabled) {
         return 'base-radio-disabled'
+      }
+      return ''
+    },
+    hideInputClass() {
+      if (this.hideInput) {
+        return 'base-radio-input--hide'
+      }
+      return ''
+    },
+    isHideInputLabelClass() {
+      if (this.hideInput) {
+        return 'base-radio-label--hide'
       }
       return ''
     }

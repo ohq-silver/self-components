@@ -2,19 +2,22 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start; //设置每个子元素的间距
-  align-items: center;
   border: 1px solid #ebebeb;
   padding: 1em 1em;
   margin-top: 1em;
 }
 .base-radio {
   display: flex;
-  width: 7%;
+  width: 7.5%;
   margin-left: 1em;
   cursor: pointer;
 }
+.base-radio:hover {
+  color: #069;
+}
 .base-radio-input {
   margin: 0.4em auto;
+  cursor: pointer;
 }
 .base-radio-checked {
   color: #069;
@@ -23,4 +26,28 @@
   color: #2C3E50;
   opacity: 0.5;
   cursor: not-allowed;
+}
+.base-radio-input--hide {
+  display: none;
+}
+.base-radio-label--hide {
+  width: 100%;
+  border: 1px solid #ebebeb;
+  padding: 0.2em 0.5em;
+  text-align: center;
+}
+.base-radio-checked.base-radio-label--hide {
+  background-color: #069;
+  border-color: #069;
+  color: #fff;
+}
+.group-radio {
+  display: flex;
+  width: 100%;
+}
+.group-radio .base-radio {
+  margin-left: 0;
+}
+.ban-group-radios {
+  margin-top: 1em;
 }
