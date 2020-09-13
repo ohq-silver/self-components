@@ -8,6 +8,7 @@
       :value="item.value"
       :label="item.label"
       :name="name"
+      :border="item.border"
       :checked="item.checked"
       :disabled="item.disabled ? item.disabled: disabled"
       :hideInput="hideInput"

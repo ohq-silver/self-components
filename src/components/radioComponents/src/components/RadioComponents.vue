@@ -89,8 +89,6 @@
         :hideInput="true"
         :disabled="true"
         :radios="groupStyleAllBanRadios"
-        @changeGroupInputStatus="changeGroupStyleAllBanInputStatus"
-        @clickGroupRadio="clickGroupStyleAllBanRadio"
       ></group-radio>
     </div>
     <code-controller
@@ -100,6 +98,32 @@
       :isShowCode="isShowGroupStyleCode"
       @showCode="showGroupStyleCode"
       @hideCode="hideGroupStyleCode"
+    ></code-controller>
+    <h3>带有边框</h3>
+    <div
+      class="base-radio-box"
+    >
+      <group-radio
+        class="show-border-radios"
+        name="borderStyle"
+        :radios="borderRadios"
+        @changeGroupInputStatus="changeBorderInputStatus"
+        @clickGroupRadio="changeBorderInputStatus"
+      ></group-radio>
+      <group-radio
+        class="ban-group-radios show-border-radios"
+        name="borderStyleAllBan"
+        :disabled="true"
+        :radios="borderAllBanRadios"
+      ></group-radio>
+    </div>
+    <code-controller
+      :codes="borderCodes"
+      :codeControllerIcon="borderStyleCodeControllerIcon"
+      :codeControllerLabel="borderStyleCodeControllerLabel"
+      :isShowCode="isShowBorderStyleCode"
+      @showCode="showBorderStyleCode"
+      @hideCode="hideBorderStyleCode"
     ></code-controller>
   </div>
 </template>
@@ -141,7 +165,7 @@ export default {
             { name: 'value', attr: '备选项1' },
             { name: 'label', attr: '备选项' },
             { name: 'name', attr: '备选项' },
-            { name: 'checked', attr: 'true' },
+            { name: ':checked', attr: 'true' },
             { name: '@click', attr: 'click' },
             { name: '@change', attr: 'change' }
           ]
@@ -152,7 +176,7 @@ export default {
             { name: 'value', attr: '备选项2' },
             { name: 'label', attr: '备选项' },
             { name: 'name', attr: '备选项' },
-            { name: 'checked', attr: 'false' },
+            { name: ':checked', attr: 'false' },
             { name: '@click', attr: 'click' },
             { name: '@change', attr: 'change' }
           ]
@@ -181,8 +205,8 @@ export default {
             { name: 'value', attr: '备选项1' },
             { name: 'label', attr: '备选项' },
             { name: 'name', attr: '备选项' },
-            { name: 'checked', attr: 'true' },
-            { name: 'disabled', attr: 'true' }
+            { name: ':checked', attr: 'true' },
+            { name: ':disabled', attr: 'true' }
           ]
         },
         {
@@ -191,9 +215,55 @@ export default {
             { name: 'value', attr: '备选项2' },
             { name: 'label', attr: '备选项' },
             { name: 'name', attr: '备选项' },
-            { name: 'checked', attr: 'false' },
-            { name: 'disabled', attr: 'true' }
+            { name: ':checked', attr: 'false' },
+            { name: ':disabled', attr: 'true' }
           ]
+        }
+      ],
+      borderRadios: [
+        {
+          value: '备选项1',
+          label: '备选项',
+          name: 'border',
+          checked: true,
+          border: true
+        },
+        {
+          value: '备选项2',
+          label: '备选项',
+          name: 'border',
+          checked: false,
+          border: true
+        },
+        {
+          value: '备选项3',
+          label: '备选项',
+          name: 'border',
+          checked: false,
+          border: true
+        }
+      ],
+      borderAllBanRadios: [
+        {
+          value: '备选项1',
+          label: '备选项',
+          name: 'border',
+          checked: true,
+          border: true
+        },
+        {
+          value: '备选项2',
+          label: '备选项',
+          name: 'border',
+          checked: false,
+          border: true
+        },
+        {
+          value: '备选项3',
+          label: '备选项',
+          name: 'border',
+          checked: false,
+          border: true
         }
       ],
       groupRadios: [
@@ -249,6 +319,83 @@ export default {
                 }
               ]
             }
+          ]
+        }
+      ],
+      borderCodes: [
+        {
+          tag: 'base-radio',
+          attr: [
+            { name: 'value', attr: '备选项1' },
+            { name: 'label', attr: '备选项' },
+            { name: 'name', attr: 'border' },
+            { name: ':checked', attr: 'true' },
+            { name: ':border', attr: 'true' },
+            { name: '@click', attr: 'click' },
+            { name: '@change', attr: 'change' }
+          ]
+        },
+        {
+          tag: 'base-radio',
+          attr: [
+            { name: 'value', attr: '备选项2' },
+            { name: 'label', attr: '备选项' },
+            { name: 'name', attr: 'border' },
+            { name: ':checked', attr: 'false' },
+            { name: ':border', attr: 'true' },
+            { name: '@click', attr: 'click' },
+            { name: '@change', attr: 'change' }
+          ]
+        },
+        {
+          tag: 'base-radio',
+          attr: [
+            { name: 'value', attr: '备选项3' },
+            { name: 'label', attr: '备选项' },
+            { name: 'name', attr: 'border' },
+            { name: ':checked', attr: 'false' },
+            { name: ':border', attr: 'true' },
+            { name: '@click', attr: 'click' },
+            { name: '@change', attr: 'change' }
+          ]
+        },
+        {
+          tag: 'base-radio',
+          attr: [
+            { name: 'value', attr: '备选项1' },
+            { name: 'label', attr: '备选项' },
+            { name: 'name', attr: 'borderBan' },
+            { name: ':checked', attr: 'true' },
+            { name: ':border', attr: 'true' },
+            { name: ':disabled', attr: 'true' },
+            { name: '@click', attr: 'click' },
+            { name: '@change', attr: 'change' }
+          ]
+        },
+        {
+          tag: 'base-radio',
+          attr: [
+            { name: 'value', attr: '备选项2' },
+            { name: 'label', attr: '备选项' },
+            { name: 'name', attr: 'borderBan' },
+            { name: ':checked', attr: 'false' },
+            { name: ':border', attr: 'true' },
+            { name: ':disabled', attr: 'true' },
+            { name: '@click', attr: 'click' },
+            { name: '@change', attr: 'change' }
+          ]
+        },
+        {
+          tag: 'base-radio',
+          attr: [
+            { name: 'value', attr: '备选项3' },
+            { name: 'label', attr: '备选项' },
+            { name: 'name', attr: 'borderBan' },
+            { name: ':checked', attr: 'false' },
+            { name: ':border', attr: 'true' },
+            { name: ':disabled', attr: 'true' },
+            { name: '@click', attr: 'click' },
+            { name: '@change', attr: 'change' }
           ]
         }
       ],
@@ -340,7 +487,10 @@ export default {
       groupCodeControllerLabel: '显示代码',
       isShowGroupStyleCode: false,
       groupStyleCodeControllerIcon: 'fa fa-plus-circle',
-      groupStyleCodeControllerLabel: '显示代码'
+      groupStyleCodeControllerLabel: '显示代码',
+      isShowBorderStyleCode: false,
+      borderStyleCodeControllerIcon: 'fa fa-plus-circle',
+      borderStyleCodeControllerLabel: '显示代码'
     }
   },
   methods: {
@@ -380,8 +530,8 @@ export default {
     clickGroupStyleRadio({ value, checked }) {
       console.log(value, checked)
     },
-    changeGroupStyleAllBanInputStatus(index) {
-      this.groupStyleAllBanRadios.map((val, idx) => {
+    changeBorderInputStatus(index) {
+      this.borderRadios.map((val, idx) => {
         if (idx === index) {
           val.checked = true
         } else {
@@ -389,7 +539,7 @@ export default {
         }
       })
     },
-    clickGroupStyleAllBanRadio({ value, checked }) {
+    clickBorderRadio({ value, checked }) {
       console.log(value, checked)
     },
     showBaseCode() {
@@ -431,6 +581,16 @@ export default {
       this.isShowGroupStyleCode = false
       this.groupStyleCodeControllerIcon = 'fa fa-plus-circle'
       this.groupStyleCodeControllerLabel = '显示代码'
+    },
+    showBorderStyleCode() {
+      this.isShowBorderStyleCode = true
+      this.borderStyleCodeControllerIcon = 'fa fa-minus-circle'
+      this.borderStyleCodeControllerLabel = '隐藏代码'
+    },
+    hideBorderStyleCode() {
+      this.isShowBorderStyleCode = false
+      this.borderStyleCodeControllerIcon = 'fa fa-plus-circle'
+      this.borderStyleCodeControllerLabel = '显示代码'
     }
   }
 }

@@ -1,6 +1,6 @@
 <template>
   <label
-    :class="'base-radio ' + disabledClass"
+    :class="'base-radio ' + disabledClass + ' ' + borderClass + ' ' + checkedClass"
     @click="click"
   >
     <input
@@ -26,6 +26,7 @@ export default {
     value: { type: String, default: '' },
     label: { type: String, default: '' },
     name: { type: String, default: '' },
+    border: { type: Boolean, default: false },
     hideInput: { type: Boolean, default: false },
     disabled: { type: Boolean, default: false },
     checked: { type: Boolean, default: false }
@@ -46,6 +47,12 @@ export default {
     checkedClass() {
       if (this.checked) {
         return 'base-radio-checked'
+      }
+      return ''
+    },
+    borderClass() {
+      if (this.border) {
+        return 'base-radio-border'
       }
       return ''
     },

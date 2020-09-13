@@ -41,6 +41,23 @@
   border-color: #069;
   color: #fff;
 }
+.base-radio-disabled.base-radio-label--hide {
+  border: 1px solid #ebebeb;
+}
+.base-radio-border {
+  border: 1px solid #ebebeb;
+  border-radius: 4px;
+  padding: 0.2em 0.2em;
+}
+.base-radio-border .base-radio-input {
+  margin: 0.4em 0.6em;
+}
+.base-radio-checked.base-radio-border {
+  border-color: #069;
+}
+.base-radio-disabled.base-radio-checked.base-radio-border {
+  border-color: rgb(235, 235, 235);
+}
 .group-radio {
   display: flex;
   width: 100%;
@@ -50,4 +67,7 @@
 }
 .ban-group-radios {
   margin-top: 1em;
+}
+.show-border-radios .base-radio {
+  margin-left: 1em;
 }
