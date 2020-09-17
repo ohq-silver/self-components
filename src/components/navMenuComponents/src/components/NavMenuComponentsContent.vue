@@ -13,6 +13,7 @@
 import ButtonComponents from '../../../buttonComponents/src/components/ButtonComponents'
 import BorderComponents from '../../../borderComponents/src/components/BorderComponents'
 import ColorComponents from '../../../colorComponents/src/components/ColorComponents'
+import ContainerComponents from '../../../containerConponents/src/components/ContainerComponents'
 import IconComponents from '../../../iconComponents/src/components/IconComponents'
 import LayoutComponents from '../../../layoutComponents/src/components/LayoutComponents'
 import LinkComponents from '../../../linkComponents/src/components/LinkComponents'
@@ -40,6 +41,8 @@ export default {
           return BorderComponents
         case 'Color':
           return ColorComponents
+        case 'Container':
+          return ContainerComponents
         case 'Icon':
           return IconComponents
         case 'Layout':

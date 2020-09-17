@@ -1,6 +1,6 @@
 <template>
   <div :class="'base-layout-row base-layout-row ' + spacingClass + ' ' + justifyClass">
-    <slot><base-layout-col></base-layout-col></slot>
+    <slot></slot>
   </div>
 </template>
 

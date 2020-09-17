@@ -1,0 +1,29 @@
+.base-container-box {
+  border: 1px solid #ebebeb;
+  padding: 1em 1em;
+  margin-top: 1em;
+}
+.base-header,
+.base-footer {
+  width: 100%;
+  background-color: #b3c0d1;
+  text-align: center;
+  line-height: 60px;
+}
+.base-main {
+  width: 100%;
+  background-color: #e9eef3;
+  text-align: center;
+  line-height: 300px;
+}
+.base-aside {
+  float: left;
+  width: 20%;
+  background-color: #d3dce6;
+  text-align: center;
+  line-height: 300px;
+}
+.base-aside::after {
+  content: '';
+  clear: both;
+}

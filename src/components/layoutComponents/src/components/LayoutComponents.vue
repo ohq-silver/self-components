@@ -223,9 +223,6 @@ export default {
                 { name: ':span', attr: '24' }
               ]
             }
-          ],
-          body: [
-            { codeContentDescribe: 'base-layout-col标签中必须先接受一个div标签再去填充内容' }
           ]
         },
         {

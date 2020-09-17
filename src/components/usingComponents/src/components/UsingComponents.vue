@@ -58,9 +58,10 @@ export default {
           { id: 1, title: 'Button 按钮' },
           { id: 2, title: 'Border 边框' },
           { id: 3, title: 'Color 色彩' },
-          { id: 4, title: 'Icon 图标' },
-          { id: 5, title: 'Layout 布局' },
-          { id: 6, title: 'Link 文字链接' },
+          { id: 4, title: 'Container 布局容器' },
+          { id: 5, title: 'Icon 图标' },
+          { id: 6, title: 'Layout 布局' },
+          { id: 7, title: 'Link 文字链接' },
           { describe: 'Form' },
           { id: 7, title: 'Radio 单选框' }
           // { id: 8, title: 'Border 边框' },

@@ -2,7 +2,7 @@
   <div
     :class="'base-layout-col base-layout-col-' + span + ' ' + offsetClass"
   >
-    <slot><div></div></slot>
+    <slot></slot>
   </div>
 </template>
 
