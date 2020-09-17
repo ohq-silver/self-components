@@ -215,30 +215,30 @@ export default {
     return {
       baseCodes: [
         {
-          tag: 'base-row',
+          tag: 'base-layout-row',
           insideTag: [
             {
-              tag: 'base-col',
+              tag: 'base-layout-col',
               attr: [
                 { name: ':span', attr: '24' }
               ]
             }
           ],
           body: [
-            { codeContentDescribe: 'base-col标签中必须先接受一个div标签再去填充内容' }
+            { codeContentDescribe: 'base-layout-col标签中必须先接受一个div标签再去填充内容' }
           ]
         },
         {
-          tag: 'base-row',
+          tag: 'base-layout-row',
           insideTag: [
             {
-              tag: 'base-col',
+              tag: 'base-layout-col',
               attr: [
                 { name: ':span', attr: '12' }
               ]
             },
             {
-              tag: 'base-col',
+              tag: 'base-layout-col',
               attr: [
                 { name: ':span', attr: '12' }
               ]
@@ -246,22 +246,22 @@ export default {
           ]
         },
         {
-          tag: 'base-row',
+          tag: 'base-layout-row',
           insideTag: [
             {
-              tag: 'base-col',
+              tag: 'base-layout-col',
               attr: [
                 { name: ':span', attr: '8' }
               ]
             },
             {
-              tag: 'base-col',
+              tag: 'base-layout-col',
               attr: [
                 { name: ':span', attr: '8' }
               ]
             },
             {
-              tag: 'base-col',
+              tag: 'base-layout-col',
               attr: [
                 { name: ':span', attr: '8' }
               ]
@@ -269,28 +269,28 @@ export default {
           ]
         },
         {
-          tag: 'base-row',
+          tag: 'base-layout-row',
           insideTag: [
             {
-              tag: 'base-col',
+              tag: 'base-layout-col',
               attr: [
                 { name: ':span', attr: '6' }
               ]
             },
             {
-              tag: 'base-col',
+              tag: 'base-layout-col',
               attr: [
                 { name: ':span', attr: '6' }
               ]
             },
             {
-              tag: 'base-col',
+              tag: 'base-layout-col',
               attr: [
                 { name: ':span', attr: '6' }
               ]
             },
             {
-              tag: 'base-col',
+              tag: 'base-layout-col',
               attr: [
                 { name: ':span', attr: '6' }
               ]
@@ -298,40 +298,40 @@ export default {
           ]
         },
         {
-          tag: 'base-row',
+          tag: 'base-layout-row',
           insideTag: [
             {
-              tag: 'base-col',
+              tag: 'base-layout-col',
               attr: [
                 { name: ':span', attr: '4' }
               ]
             },
             {
-              tag: 'base-col',
+              tag: 'base-layout-col',
               attr: [
                 { name: ':span', attr: '4' }
               ]
             },
             {
-              tag: 'base-col',
+              tag: 'base-layout-col',
               attr: [
                 { name: ':span', attr: '4' }
               ]
             },
             {
-              tag: 'base-col',
+              tag: 'base-layout-col',
               attr: [
                 { name: ':span', attr: '4' }
               ]
             },
             {
-              tag: 'base-col',
+              tag: 'base-layout-col',
               attr: [
                 { name: ':span', attr: '4' }
               ]
             },
             {
-              tag: 'base-col',
+              tag: 'base-layout-col',
               attr: [
                 { name: ':span', attr: '4' }
               ]
@@ -344,31 +344,31 @@ export default {
       baseCodeControllerLabel: '显示代码',
       spacingCodes: [
         {
-          tag: 'base-row',
+          tag: 'base-layout-row',
           attr: [
             { name: ':spacing', attr: 'true' }
           ],
           insideTag: [
             {
-              tag: 'base-col',
+              tag: 'base-layout-col',
               attr: [
                 { name: ':span', attr: '6' }
               ]
             },
             {
-              tag: 'base-col',
+              tag: 'base-layout-col',
               attr: [
                 { name: ':span', attr: '6' }
               ]
             },
             {
-              tag: 'base-col',
+              tag: 'base-layout-col',
               attr: [
                 { name: ':span', attr: '6' }
               ]
             },
             {
-              tag: 'base-col',
+              tag: 'base-layout-col',
               attr: [
                 { name: ':span', attr: '6' }
               ]
@@ -381,7 +381,7 @@ export default {
       spacingCodeControllerLabel: '显示代码',
       mixinCodes: [
         {
-          tag: 'base-row',
+          tag: 'base-layout-row',
           attr: [
             { name: ':spacing', attr: 'true' }
           ],
@@ -390,13 +390,13 @@ export default {
           ],
           insideTag: [
             {
-              tag: 'base-col',
+              tag: 'base-layout-col',
               attr: [
                 { name: ':span', attr: '16' }
               ]
             },
             {
-              tag: 'base-col',
+              tag: 'base-layout-col',
               attr: [
                 { name: ':span', attr: '8' }
               ]
@@ -404,31 +404,31 @@ export default {
           ]
         },
         {
-          tag: 'base-row',
+          tag: 'base-layout-row',
           attr: [
             { name: ':spacing', attr: 'true' }
           ],
           insideTag: [
             {
-              tag: 'base-col',
+              tag: 'base-layout-col',
               attr: [
                 { name: ':span', attr: '8' }
               ]
             },
             {
-              tag: 'base-col',
+              tag: 'base-layout-col',
               attr: [
                 { name: ':span', attr: '8' }
               ]
             },
             {
-              tag: 'base-col',
+              tag: 'base-layout-col',
               attr: [
                 { name: ':span', attr: '4' }
               ]
             },
             {
-              tag: 'base-col',
+              tag: 'base-layout-col',
               attr: [
                 { name: ':span', attr: '4' }
               ]
@@ -436,25 +436,25 @@ export default {
           ]
         },
         {
-          tag: 'base-row',
+          tag: 'base-layout-row',
           attr: [
             { name: ':spacing', attr: 'true' }
           ],
           insideTag: [
             {
-              tag: 'base-col',
+              tag: 'base-layout-col',
               attr: [
                 { name: ':span', attr: '4' }
               ]
             },
             {
-              tag: 'base-col',
+              tag: 'base-layout-col',
               attr: [
                 { name: ':span', attr: '16' }
               ]
             },
             {
-              tag: 'base-col',
+              tag: 'base-layout-col',
               attr: [
                 { name: ':span', attr: '4' }
               ]
@@ -467,19 +467,19 @@ export default {
       mixinCodeControllerLabel: '显示代码',
       offsetCodes: [
         {
-          tag: 'base-row',
+          tag: 'base-layout-row',
           body: [
             { codeContentDescribe: 'offset提供的值有4,6,8,12' }
           ],
           insideTag: [
             {
-              tag: 'base-col',
+              tag: 'base-layout-col',
               attr: [
                 { name: ':span', attr: '6' }
               ]
             },
             {
-              tag: 'base-col',
+              tag: 'base-layout-col',
               attr: [
                 { name: ':span', attr: '6' },
                 { name: ':offset', attr: '6' }
@@ -488,17 +488,17 @@ export default {
           ]
         },
         {
-          tag: 'base-row',
+          tag: 'base-layout-row',
           insideTag: [
             {
-              tag: 'base-col',
+              tag: 'base-layout-col',
               attr: [
                 { name: ':span', attr: '6' },
                 { name: ':offset', attr: '6' }
               ]
             },
             {
-              tag: 'base-col',
+              tag: 'base-layout-col',
               attr: [
                 { name: ':span', attr: '6' },
                 { name: ':offset', attr: '6' }
@@ -507,10 +507,10 @@ export default {
           ]
         },
         {
-          tag: 'base-row',
+          tag: 'base-layout-row',
           insideTag: [
             {
-              tag: 'base-col',
+              tag: 'base-layout-col',
               attr: [
                 { name: ':span', attr: '12' },
                 { name: ':offset', attr: '6' }
@@ -524,22 +524,22 @@ export default {
       offsetCodeControllerLabel: '显示代码',
       justifyCodes: [
         {
-          tag: 'base-row',
+          tag: 'base-layout-row',
           insideTag: [
             {
-              tag: 'base-col',
+              tag: 'base-layout-col',
               attr: [
                 { name: ':span', attr: '6' }
               ]
             },
             {
-              tag: 'base-col',
+              tag: 'base-layout-col',
               attr: [
                 { name: ':span', attr: '6' }
               ]
             },
             {
-              tag: 'base-col',
+              tag: 'base-layout-col',
               attr: [
                 { name: ':span', attr: '6' }
               ]
@@ -547,25 +547,25 @@ export default {
           ]
         },
         {
-          tag: 'base-row',
+          tag: 'base-layout-row',
           attr: [
             { name: 'justify', attr: 'center' }
           ],
           insideTag: [
             {
-              tag: 'base-col',
+              tag: 'base-layout-col',
               attr: [
                 { name: ':span', attr: '6' }
               ]
             },
             {
-              tag: 'base-col',
+              tag: 'base-layout-col',
               attr: [
                 { name: ':span', attr: '6' }
               ]
             },
             {
-              tag: 'base-col',
+              tag: 'base-layout-col',
               attr: [
                 { name: ':span', attr: '6' }
               ]
@@ -573,25 +573,25 @@ export default {
           ]
         },
         {
-          tag: 'base-row',
+          tag: 'base-layout-row',
           attr: [
             { name: 'justify', attr: 'end' }
           ],
           insideTag: [
             {
-              tag: 'base-col',
+              tag: 'base-layout-col',
               attr: [
                 { name: ':span', attr: '6' }
               ]
             },
             {
-              tag: 'base-col',
+              tag: 'base-layout-col',
               attr: [
                 { name: ':span', attr: '6' }
               ]
             },
             {
-              tag: 'base-col',
+              tag: 'base-layout-col',
               attr: [
                 { name: ':span', attr: '6' }
               ]
@@ -599,25 +599,25 @@ export default {
           ]
         },
         {
-          tag: 'base-row',
+          tag: 'base-layout-row',
           attr: [
             { name: 'justify', attr: 'space-between' }
           ],
           insideTag: [
             {
-              tag: 'base-col',
+              tag: 'base-layout-col',
               attr: [
                 { name: ':span', attr: '6' }
               ]
             },
             {
-              tag: 'base-col',
+              tag: 'base-layout-col',
               attr: [
                 { name: ':span', attr: '6' }
               ]
             },
             {
-              tag: 'base-col',
+              tag: 'base-layout-col',
               attr: [
                 { name: ':span', attr: '6' }
               ]
@@ -625,25 +625,25 @@ export default {
           ]
         },
         {
-          tag: 'base-row',
+          tag: 'base-layout-row',
           attr: [
             { name: 'justify', attr: 'space-around' }
           ],
           insideTag: [
             {
-              tag: 'base-col',
+              tag: 'base-layout-col',
               attr: [
                 { name: ':span', attr: '6' }
               ]
             },
             {
-              tag: 'base-col',
+              tag: 'base-layout-col',
               attr: [
                 { name: ':span', attr: '6' }
               ]
             },
             {
-              tag: 'base-col',
+              tag: 'base-layout-col',
               attr: [
                 { name: ':span', attr: '6' }
               ]
