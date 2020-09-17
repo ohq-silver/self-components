@@ -8,6 +8,7 @@
         :tag="item.tag"
         :attr="item.attr"
         :body="item.body"
+        :insideTag="item.insideTag"
       ></code-components>
     </div>
     <div

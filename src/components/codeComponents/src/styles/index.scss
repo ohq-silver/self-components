@@ -31,3 +31,19 @@
 .code-components-open-tag-attr {
   color: #636
 }
+
+.code-components-content--have-inside-tag {
+  display: block;
+}
+.code-components-content--have-inside-tag .code-components-close-tag {
+  margin-left: 1em;
+}
+.code-components-content--have-inside-tag .inside-tag {
+  display: flex;
+}
+.code-components-content--have-inside-tag .inside-tag .code-components-open-tag {
+  margin-left: 2em;
+}
+.code-components-content--have-inside-tag .inside-tag .code-components-close-tag {
+  margin-left: 0em;
+}
