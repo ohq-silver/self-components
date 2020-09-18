@@ -3,14 +3,12 @@
     class="base-container"
   >
     <slot>
-      <slot></slot>
     </slot>
   </div>
 </template>
 
 <script>
 export default {
-
 }
 </script>
 

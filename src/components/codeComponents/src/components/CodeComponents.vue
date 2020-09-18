@@ -8,6 +8,7 @@
         <code-components-open-tag
           :tag="tag"
           :attr="attr"
+          :label="label"
         ></code-components-open-tag>
         <div
           v-if="insideTag !== null"
@@ -20,6 +21,7 @@
             <code-components-open-tag
               :tag="item.tag"
               :attr="item.attr"
+              :label="item.label"
             ></code-components-open-tag>
             <code-components-close-tag
               :tag="item.tag"
@@ -52,6 +54,7 @@ export default {
   props: {
     attr: { type: Array, default: () => ([]) },
     tag: { type: String, default: '' },
+    label: { type: String, default: '' },
     body: { type: Array, default: null },
     insideTag: { type: Array, default: null }
   },

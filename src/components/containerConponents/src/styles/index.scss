@@ -1,4 +1,5 @@
-.base-container-box {
+.base-container-box,
+.code-controller-box {
   border: 1px solid #ebebeb;
   padding: 1em 1em;
   margin-top: 1em;
@@ -26,4 +27,17 @@
 .base-aside::after {
   content: '';
   clear: both;
+}
+.is-vertical {
+  width: 80%;
+  margin-left: 20%;
+}
+.is-vertical-1 {
+  line-height: 360px;
+}
+.is-vertical-2 {
+  line-height: 420px;
+}
+.code-controller-box .code-controller-button {
+  display: none;
 }
